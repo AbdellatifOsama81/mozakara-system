@@ -1,0 +1,13 @@
+@use '../../../student.component.scss';
+
+.thumbnail-container{
+    i{
+        position: absolute;
+        color: white;
+        font-size: x-large;
+    }
+}
+.card-expanded-item{
+    border-radius: 0 0 10px 10px;
+    border-top: 0.3px solid student.$my-light-gray;
+}

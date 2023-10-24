@@ -1,0 +1,48 @@
+@use '../../../../../style/styles.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500&display=swap');
+
+$my-gray: #4E5566;
+$my-light-blue: #B4D1C4;
+$my-dark-blue: #003456;
+
+* {
+    font-family: 'Tajawal', sans-serif;
+}
+.card {
+    border-color: styles.$primary;
+    border-radius: 16px;
+    border-width: 0.9px;
+    padding: 1em;
+
+    .img-container {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: $my-light-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+            border-radius: 50%;
+        }
+
+    }
+    .study-level{
+        color: $my-dark-blue;
+    }
+}
+
+.nav-link {
+    color: $my-gray;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: styles.$primary !important;
+}
+.btn{
+    border-radius: 20px;
+}

@@ -1,0 +1,8 @@
+<button class="btn btn-view-toggle me-1" data-bs-toggle="button" type="button" (click)="setView('grid')"
+    [class.active]="currViewLocal==='grid'">
+    <i class="bi bi-grid"></i>
+</button>
+<button class="btn btn-view-toggle me-1" data-bs-toggle="button" type="button" (click)="setView('horizontal')"
+    [class.active]="currViewLocal==='horizontal'">
+    <i class="bi bi-view-stacked"></i>
+</button>

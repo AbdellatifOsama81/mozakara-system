@@ -1,0 +1,11 @@
+@use '../../../../../../style/styles.scss';
+@use '../../../student.component.scss';
+
+.btn {
+    background-color: student.$my-third-blue;
+    border-color: student.$my-third-blue;
+    border-radius: 50px;
+}
+.accordion-btn{
+    color: student.$my-third-blue;
+}

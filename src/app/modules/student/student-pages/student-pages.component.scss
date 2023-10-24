@@ -1,0 +1,21 @@
+@use '../../../../style/styles.scss';
+@use '../student.component.scss';
+
+.content-section {
+    background-color: student.$my-background-white;
+    margin-top: 10em;
+    padding-top: 10em;
+}
+.my-background {
+    background-color: styles.$secondary;
+    padding-bottom: 5em;
+}
+// .my-container{
+//     position: relative;
+// }
+app-student-info-card{
+    position: absolute;
+    top: 5em;
+    left: 0;
+    right: 0;
+}
