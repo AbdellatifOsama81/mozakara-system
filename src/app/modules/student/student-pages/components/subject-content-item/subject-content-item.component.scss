@@ -1,13 +1,23 @@
-@use '../../../student.component.scss';
+@import '../../../student.component.scss';
 
-.thumbnail-container{
-    i{
+.thumbnail-container {
+    i {
         position: absolute;
         color: white;
         font-size: x-large;
     }
 }
-.card-expanded-item{
+
+.card-expanded-item {
     border-radius: 0 0 10px 10px;
-    border-top: 0.3px solid student.$my-light-gray;
+    border-top: 0.3px solid $my-light-gray;
+}
+
+@include tablet {
+    .subject-card-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

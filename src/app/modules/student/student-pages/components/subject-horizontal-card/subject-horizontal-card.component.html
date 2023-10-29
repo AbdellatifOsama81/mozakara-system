@@ -1,11 +1,10 @@
 <div class="card-main-container">
-
     <div class="p-3  d-flex justify-content-between">
         <div class="col-9 d-flex flex-column justify-content-between">
             <app-subject-info></app-subject-info>
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="card-actions-container d-flex justify-content-between align-items-center">
                 <div class="col-5">
-                    <div class="d-flex">
+                    <div class="d-flex justify-content-center">
                         <a type="button" data-bs-toggle="collapse" data-bs-target="#subject-contents"
                             class="p-3 w-100 accordion-btn" (click)="rotateButton()">
                             <i *ngIf="!expanded" class="bi bi-caret-down-fill"></i>
@@ -15,17 +14,17 @@
                         <a href="#" class="btn btn-primary p-3 w-100">متابعة التقدم</a>
                     </div>
                 </div>
-                <div class="col offset-1">
+                <!-- <div class="offset-1" [class.col-6]="largeScreen" [class.col-12]="!largeScreen" > -->
+                <div [ngClass]="{'col-6': largeScreen, 'offset-1':largeScreen, 'col-12': !largeScreen}">
                     <app-subject-progress [progress]="65"></app-subject-progress>
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-3 overflow-hidden">
             <div class="d-flex justify-content-center">
                 <img [src]="assetsPath +'/subject-img.png'" alt="subject-img">
             </div>
         </div>
-
     </div>
     <div class="collapse" id="subject-contents">
         <app-subject-content-list></app-subject-content-list>

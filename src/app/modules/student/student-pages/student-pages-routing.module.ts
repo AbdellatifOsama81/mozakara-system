@@ -11,10 +11,9 @@ const routes: Routes = [
       { path: 'in-progress', loadChildren: () => import('./in-progress-subjects/in-progress-subjects.module').then(m => m.InProgressSubjectsModule) },
       { path: 'completed-subjects', loadChildren: () => import('./completed-subjects/completed-subjects.module').then(m => m.CompletedSubjectsModule) },
       { path: 'tests', loadChildren: () => import('./tests/tests.module').then(m => m.TestsModule) },
-      { path: 'followers', loadChildren: () => import('./followers/followers.module').then(m => m.FollowersModule) }
+      { path: 'following', loadChildren: () => import('./following/following.module').then(m => m.FollowingModule) }
     ]
   },
-
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

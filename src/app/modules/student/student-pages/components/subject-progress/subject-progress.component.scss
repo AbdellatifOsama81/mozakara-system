@@ -1,13 +1,12 @@
-@use '../../../../../../style/styles.scss';
-@use '../../../student.component.scss';
+@import '../../../student.component.scss';
 
 .progress-label {
-    color: styles.$dark;
+    color: $dark;
     font-size: small;
 }
 
 // .full {
-//     color: student.$my-success;
+//     color: $my-success;
 // }
 
 progress {
@@ -16,11 +15,11 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-    background-color: student.$my-light-gray;
+    background-color: $my-light-gray;
     border-radius: 7px;
 }
 
 progress::-webkit-progress-value {
-    background-color: styles.$dark;
+    background-color: $dark;
     border-radius: 7px;
 }

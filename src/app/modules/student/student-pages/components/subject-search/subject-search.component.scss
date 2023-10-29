@@ -1,5 +1,4 @@
-@use '../../../../../../style/styles.scss';
-@use '../../../student.component.scss';
+@import '../../../student.component.scss';
 
 * {
     text-align: end;
@@ -8,21 +7,29 @@
 label {
     font-size: small;
 }
-input,select{
+
+input,
+select {
     border-radius: 30px;
     border: 1px solid #D1D1D1;
     background-color: white;
-    color: student.$my-gray;
-}
-select:hover{
-    cursor: pointer;
-}
-#subject-name{
-    text-align: start;
-    // font-family: bootstrap-icons !important;
-    i{
-        position: absolute;
-        top: 0;
-    }
+    color: $my-gray;
 }
 
+select:hover {
+    cursor: pointer;
+}
+
+#subject-name {
+    text-align: start;
+    // font-family: bootstrap-icons !important;
+}
+
+.search-contianer {
+    position: relative;
+    i {
+        position: absolute;
+        top:50%;
+        align-self: flex-end;
+    }
+}

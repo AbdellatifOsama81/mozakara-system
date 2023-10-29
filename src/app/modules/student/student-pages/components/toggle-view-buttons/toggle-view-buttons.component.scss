@@ -1,13 +1,12 @@
-@use '../../../../../../style/styles.scss';
-@use '../../../student.component.scss';
+@import '../../../student.component.scss';
 
 .btn-view-toggle{
-    color: student.$my-gray !important;
-    background-color: student.$my-background-white !important;
-    border-color: student.$my-background-white !important;
+    color: $my-gray !important;
+    background-color: $my-background-white !important;
+    border-color: $my-background-white !important;
 }
 .btn-view-toggle.active{
     color: white !important;
-    background-color: styles.$primary !important;
-    border-color: styles.$primary !important;
+    background-color: $primary !important;
+    border-color: $primary !important;
 }

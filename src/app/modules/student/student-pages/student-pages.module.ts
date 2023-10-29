@@ -12,6 +12,7 @@ import { SubjectProgressComponent } from './components/subject-progress/subject-
 import { SubjectContentListComponent } from './components/subject-content-list/subject-content-list.component';
 import { SubjectContentItemComponent } from './components/subject-content-item/subject-content-item.component';
 import { ToggleViewButtonsComponent } from './components/toggle-view-buttons/toggle-view-buttons.component';
+import { ImgContainerComponent } from './components/img-container/img-container.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ToggleViewButtonsComponent } from './components/toggle-view-buttons/tog
     SubjectProgressComponent,
     SubjectContentListComponent,
     SubjectContentItemComponent,
-    ToggleViewButtonsComponent
+    ToggleViewButtonsComponent,
+    ImgContainerComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +43,8 @@ import { ToggleViewButtonsComponent } from './components/toggle-view-buttons/tog
     SubjectProgressComponent,
     SubjectContentListComponent,
     SubjectContentItemComponent,
-    ToggleViewButtonsComponent
+    ToggleViewButtonsComponent,
+    ImgContainerComponent
   ]
 })
 export class StudentPagesModule { }

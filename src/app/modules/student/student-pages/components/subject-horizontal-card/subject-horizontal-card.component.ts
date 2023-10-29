@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-subject-horizontal-card',
@@ -8,8 +8,16 @@ import { Component } from '@angular/core';
 export class SubjectHorizontalCardComponent {
   assetsPath = '../../../../../../assets/images/student/';
   expanded = false;
+  largeScreen=false;
 
   rotateButton() {
     this.expanded = !this.expanded;
   }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.largeScreen = window.innerWidth > 922;
+
+  }
+
 }

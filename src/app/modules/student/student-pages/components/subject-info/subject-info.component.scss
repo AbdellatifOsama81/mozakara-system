@@ -1,10 +1,9 @@
-@use '../../../../../../style/styles.scss';
-@use '../../../student.component.scss';
+@import '../../../student.component.scss';
 
 .pill {
-    background-color: student.$my-pill-blue;
+    background-color: $my-pill-blue;
     border-radius: 20px;
     width: max-content;
-    color: styles.$primary;
+    color: $primary;
     font-size: x-small;
 }

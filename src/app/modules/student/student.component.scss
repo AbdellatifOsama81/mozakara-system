@@ -1,13 +1,15 @@
-@use '../../../style/styles.scss';
+@import '../../../style/styles.scss';
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500&display=swap');
 
 $my-third-blue: #3290FF;
 $my-gray: #4E5566;
 $my-light-gray: #C7C7C7;
 $my-dark-blue: #003456;
+$my-light-blue: #B4D1C4;
 $my-pill-blue: #6BD0FD3D;
 $my-success: #23BD33;
 $my-background-white: #F2F2F2;
+
 
 
 * {
@@ -15,7 +17,7 @@ $my-background-white: #F2F2F2;
 }
 
 .primary-subtitle {
-    color: styles.$dark;
+    color: $dark;
 }
 
 .subject-card-title {

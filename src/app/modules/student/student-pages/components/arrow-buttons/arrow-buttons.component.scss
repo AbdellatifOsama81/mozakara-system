@@ -1,5 +1,5 @@
-@use '../../../../../../style/styles.scss';
+@import '../../../../../../style/styles.scss';
 
 i {
-    color: styles.$primary;
+    color: $primary;
 }
