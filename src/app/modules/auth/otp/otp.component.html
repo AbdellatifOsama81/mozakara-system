@@ -1,0 +1,25 @@
+<div class="body" dir="rtl">
+
+    <div class="d-flex">
+     <div class="form">
+      <div class="header text-center">
+        <h1 class="mb-5 ">هيا بنا!</h1>
+        <div>
+          <img src="/assets/images/auth/mailbox.svg" clas>
+        </div>
+        <p class="text-bold text-end me-5">لقد أرسلنا الي بريدك الالكتروني الأن</p>
+        <p class="text-muted text-end me-5">من فضلك قم بإدخال رمز التأكيد المرسل لبريدك الألكتروني</p>
+        <p class="text-end me-5">youremail.com</p>
+      </div>
+      <div class="mx-3 text-danger" *ngIf="verificationError">
+            {{verificationError}}
+      </div>
+<form  [formGroup]="verificationForm" (ngSubmit)="Verify()" class="m-2 ms-2" dir="ltr">
+    <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="config" style="display: flex; justify-content: center;align-items: center;"> </ng-otp-input>
+
+    <div >
+        <button   class="btn btn-primary w-100 mt-4">تأكيد</button>
+    </div>
+</form>
+<span class="mt-2 d-flex justify-content-center align-items-center">إعادة إرسال  رمز التأكيد <a routerLink="/auth/otp" class="text-decoration-none text-muted" >او محاولة مرة أخري</a></span>
+</div>

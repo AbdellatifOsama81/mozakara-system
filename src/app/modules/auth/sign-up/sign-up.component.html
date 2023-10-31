@@ -1,0 +1,121 @@
+
+<div class="body" dir="rtl">
+     <div class="form">
+         <h2 class="mb-5">انشاء حساب جديد</h2>
+         <div class="mx-3 text-danger my-3" *ngIf="errorForSignUp !='[object Object]'">
+            <p> {{errorForSignUp}}</p>
+         </div>
+         <form [formGroup]="signUpForm" (ngSubmit)="userRegister(signUpForm)" class=" mx-auto">
+             <div class="form-group mb-4">
+                 <label for="firstName" class="mb-2">الاسم الأول</label>
+                 <input type="text" id="firstName" class="form-control mb-1" formControlName="firstName">
+                 <div *ngIf="firstName?.errors && firstName?.touched" class="mx-3 text-danger">
+                     <p class="mb-0" *ngIf="firstName?.getError('minlength')">min length 3</p>
+                     <p class="mb-0" *ngIf="firstName?.getError('required')">this feild is required</p>
+                     <p class="mb-0" *ngIf="firstName?.getError('maxlength')">max length 10</p>
+                 </div>
+             </div>
+             <div class="form-group mb-4">
+                 <label for="secondName" class="mb-2">الإسم الثاني</label>
+                 <input type="text" id="secondName" class="form-control"  formControlName="secondName">
+                 <div *ngIf="secondName.errors && signUpForm.get('secondName')?.touched" class="mx-3 text-danger">
+                     <p class="mb-0" *ngIf="secondName?.getError('minlength')">min length 3</p>
+                     <p class="mb-0" *ngIf="secondName?.getError('required')">this feild is required</p>
+                     <p class="mb-0" *ngIf="secondName?.getError('maxlength')">max length 10</p>
+                 </div>
+             </div>
+             <div class="form-group mb-4">
+                 <label for="familyName" class="mb-2"> إسم العائلة</label>
+                 <input type="text" id="familyName" class="form-control"  formControlName="familyName">
+                 <div *ngIf="familyName?.errors && familyName?.touched" class="mx-3 text-danger">
+                     <p class="mb-0" *ngIf="familyName?.getError('minlength')">min length 3</p>
+                     <p class="mb-0" *ngIf="familyName?.getError('required')">this feild is required</p>
+                     <p class="mb-0" *ngIf="familyName?.getError('maxlength')">max length 10</p>
+                 </div>
+             </div>
+             <div class="form-group mb-4">
+                 <label for="email" class="mb-2">البريد الألكتروني</label>
+                 <input type="email" id="email" class="form-control"  formControlName="email">
+                 <div *ngIf="email?.errors && email?.touched" class="mx-3 text-danger">
+                     <p class="mb-0" *ngIf="email?.getError('required')">this feild is required</p>
+                     <p class="mb-0" *ngIf="email?.getError('email')">Invalid email</p>
+                 </div>
+             </div>
+             <div class="form-group mb-4">
+                <label for="phoneNumber" class="mb-2">رقم التليفون</label>
+                <input type="text" id="phoneNumber" class="form-control"  formControlName="phoneNumber">
+                <div *ngIf="phoneNumber?.errors && phoneNumber?.touched" class="mx-3 text-danger">
+                    <p class="mb-0" *ngIf="phoneNumber?.getError('pattern')">min length 10 Invalid phone number</p>
+                    <p class="mb-0" *ngIf="phoneNumber?.getError('required')">this feild is required</p>
+                    <p class="mb-0" *ngIf="phoneNumber?.getError('maxlength')">max length 12</p>
+                </div>
+            </div>
+            <div class="form-group mb-4"> 
+                <label for="role">إختر النوع</label>
+                <select class="form-control" id="gender" formControlName="gender" >
+                        <option  value="male">ذكر</option>
+                        <option  value="female">أنثى</option>
+                </select>
+                 <div *ngIf="gender?.errors && gender?.touched" class="mx-3 text-danger">
+                    <p class="mb-0" *ngIf="gender?.getError('minlength')">min length 4</p>
+                    <p class="mb-0" *ngIf="gender?.getError('required')">this feild is required</p>
+                    <p class="mb-0" *ngIf="gender?.getError('maxlength')">max length 6</p>
+                </div>
+            </div>
+            <div class="form-group mb-4"> 
+                <label for="role">إختر مستخدم</label>
+                <select class="form-control" id="role" formControlName="role" >
+                    <ng-container  *ngFor="let role of roles">
+                        <option  [value]="role.name">{{ role.name }}</option>
+                    </ng-container>
+                </select>
+                 <div *ngIf="role?.errors && role?.touched" class="mx-3 text-danger">
+                    <p class="mb-0" *ngIf="role?.getError('minlength')">min length 10</p>
+                    <p class="mb-0" *ngIf="role?.getError('required')">this feild is required</p>
+                    <p class="mb-0" *ngIf="role?.getError('maxlength')">max length 12</p>
+                </div>
+            </div>
+             <div class="form-group mb-4">
+                 <label for="password" class="mb-2">الرقم السري</label>
+                 <div class="div">
+                    <input  class="password" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" name="password"  id="password" class="form-control"  formControlName="password">
+                    <p class="show" (click)="togglePassword()" >إظهار</p>
+                 </div>
+                 <div *ngIf="passWord?.errors && passWord?.touched" class="mx-3 text-danger">
+                     <p class="mb-0" *ngIf="passWord?.getError('pattern')">Invalid password</p>
+                     <p class="mb-0" *ngIf="passWord?.getError('required')">this feild is required</p>
+                 </div>
+             </div>
+             <div class="form-group mb-4">
+                 <label for="confirmPassword" class="mb-2">تأكيد كلمة المرور</label>
+                 <div class="div">
+                    <input  [type]="showConfirmPassword ? 'text' : 'password'" name="confirmPassword" id="confirmPassword" class="form-control"  formControlName="confirmPassword">
+                    <p class="show" (click)="toggleConfirmPassword()" >إظهار</p>
+                 </div>
+                 <div *ngIf="signUpForm.value.Password != signUpForm.value.confirmPassword  "class="mx-3 text-danger">
+                     <p class="mb-0" *ngIf="confirmPassWord?.getError('pattern')"> Confirmed password not matched</p>
+                 </div>
+             </div> 
+             <div class="form-group mb-4">الدولة
+                 <label for="role"></label>
+                 <select class="form-control mx-2" id="countryCode" formControlName="countryCode" >
+                     <ng-container  *ngFor="let country of countryCodes">
+                         <option  [value]="'+'+country.countryCode">{{ country.countryName }}</option>
+                     </ng-container>
+                 </select>
+                  <div *ngIf="countryCode?.errors && countryCode?.touched" class="mx-3 text-danger">
+                     <p class="mb-0" *ngIf="countryCode?.getError('minlength')">min length 10</p>
+                     <p class="mb-0" *ngIf="countryCode?.getError('required')">this feild is required</p>
+                     <p class="mb-0" *ngIf="countryCode?.getError('maxlength')">max length 12</p>
+                 </div>
+             </div>    
+             <div >
+
+                 <button *ngIf="isLoading==false" [disabled]="!signUpForm.valid" (click)="emitValue()" class="btn btn-primary w-100  mx-2">انشاء حساب</button>
+             </div>
+         </form>
+         <span class="mt-2 d-flex justify-content-center align-items-center">هل لديك حساب؟ <a routerLink="/auth/login" class="text-decoration-none" style="color: blue;">تسجيل دخول</a></span>
+     </div>
+ </div>
+ 
+ 
