@@ -65,7 +65,6 @@
         display: none;
     }
     
-  
     .logo{
         display: block;
         width: 100%;
@@ -79,48 +78,15 @@
 @media only screen 
   and (min-width: 993px) 
   and (max-height: 1366px) 
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-/*     .imgStyle{
-        display: none;
-    }
+  and (-webkit-min-device-pixel-ratio: 1.5) {  
     .design{
-        width: 100%;
         position: relative;
         padding: 0;
+        margin: 0;
+        margin-right: 100px;
     }
-    .regist_design{
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        display: block;  
-    }
-
-    .logo{
-        display: block;
-        width: 100%;
-        margin: auto;
-        height: 100px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }   
-    .forms{
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }  */
-     
-.design{
-    position: relative;
-    padding: 0;
-    margin: 0;
-    margin-right: 100px;
-}
-
-.imgStyle{
-  position: sticky;
-  top:0;
-}  
-
-  
+    .imgStyle{
+      position: sticky;
+      top:0;
+    }  
 }
