@@ -21,7 +21,7 @@ export class ForgetPasswordComponent {
   }
 
   ResetPassword(form:FormGroup){
-   //this.isLoading =true;
+   this.isLoading =true;
     if(this.forgetPasswordForm.valid){
       this._auth.forgetPassword(this.forgetPasswordForm.value).subscribe({
         next:(data:any) => { this.nextSubscribedData(data); },
@@ -46,5 +46,9 @@ export class ForgetPasswordComponent {
 
   get email(){
     return this.forgetPasswordForm.get('email')
+  }
+
+  getControl(name: string){
+    return this.forgetPasswordForm.get(name) as FormControl
   }
 }

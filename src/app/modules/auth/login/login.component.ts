@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 export class LoginComponent {
   loginForm:any;
   errorForLogin:string=''
+  isLoading:boolean = false;
 
   constructor(private _formBuilder:FormBuilder , private _auth:AuthService, private _router:Router){
     this.loginForm = _formBuilder.group({
@@ -20,6 +21,7 @@ export class LoginComponent {
   }
 
   LoginUser(form:FormGroup){
+    this.isLoading = true;
     if(this.loginForm.valid){
       this._auth.login(this.loginForm.value).subscribe({
         next:(data:any)=>{ this.nextsubscribedDataLogin(data) },
@@ -29,18 +31,22 @@ export class LoginComponent {
   }
 
   nextsubscribedDataLogin(data:any){
+    this.isLoading = false;
     if(data.succeeded == true){
       localStorage.setItem("token",data.data)
       this._router.navigate(['/'])
     }
   }
   
-  get email(){
+/*   get email(){
     return this.loginForm.get('email')
   }
   get password(){
     return this.loginForm.get('password')
-  }
+  } */
 
+  getControl(name: string){
+    return this.loginForm.get(name) as FormControl
+  }
 }
 

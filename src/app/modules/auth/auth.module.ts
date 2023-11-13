@@ -9,6 +9,7 @@ import { UpdatePasswordComponent } from './update-password/update-password.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { OtpComponent } from './otp/otp.component';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -23,8 +24,9 @@ import { NgOtpInputModule } from 'ng-otp-input';
   imports: [
     CommonModule,
     AuthRoutingModule,
+    SharedModule,
     ReactiveFormsModule,
-    NgOtpInputModule 
+    NgOtpInputModule ,
   ]
 })
 export class AuthModule { }

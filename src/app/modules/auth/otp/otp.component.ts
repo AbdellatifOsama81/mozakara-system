@@ -15,7 +15,8 @@ export class OtpComponent implements OnInit {
   code:string='';
   lastcomponent!:string;
   verificationForm! :any; 
-
+  currentEmail!: string;
+  isLoading: boolean = false;
 
   constructor(private formbuilder:FormBuilder,private _auth:AuthService, private _router:Router, private location:Location){
     this.verificationForm = formbuilder.group({
@@ -25,7 +26,7 @@ export class OtpComponent implements OnInit {
   
   ngOnInit(): void {
     this.lastcomponent = this._auth.getComponentName();
-    console.log(this.lastcomponent);
+    this.currentEmail = this._auth.getEmail();
   }
   
   config ={
@@ -45,7 +46,6 @@ export class OtpComponent implements OnInit {
   
   onOtpChange(code:string){
     this.code = code
-    console.log(this.code)
   }
 
   objOTPform={
@@ -54,24 +54,38 @@ export class OtpComponent implements OnInit {
   }
 
   Verify():void {
+    this.isLoading = true;
     if(this.lastcomponent =='resetPassord')  this.resetPassword();
     else if(this.lastcomponent == 'activateAccount')  this.activateAccount();
+   
   }
 
   activateAccount(){
     this._auth.activateAccount(this.objOTPform).subscribe(
-      (next) => { this._router.navigate(['/auth/login']) },
-      (error) => { this.verificationError = error.error.message; }
+      (next) => 
+      { 
+        this.isLoading = false;
+        this._auth.remove('componentName')
+        this._router.navigate(['/auth/login']) ;
+      },
+      (error) => { 
+        this.verificationError = error.error.message;
+        this.isLoading = false;;
+       }
    );
   }
 
   resetPassword(){
     this._auth.ResetPassword(this.objOTPform).subscribe(
       (data:any) => { 
+        this.isLoading = false;
+        this._auth.remove('componentName');
          this._auth.setOTPResult(data.succeeded);
          this._router.navigate(['/auth/update-password']);
        },
-      (error) => { this.verificationError = error.message; }
+      (error) => {
+         this.verificationError = error.error.message; 
+         this.isLoading = false;}
    );
   }
 }

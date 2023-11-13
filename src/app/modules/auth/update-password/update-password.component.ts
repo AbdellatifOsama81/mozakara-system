@@ -28,20 +28,13 @@ export class UpdatePasswordComponent {
     this.isLoading =true;
     this._auth.updatePassword(this.updatePasswordForm.value).subscribe({
       next:(data:any) => { this.subscribedSuccessuly() },
-      error:(err:any) => { this.updatePasswordError = err.error.message }
+      error:(err:any) => { this.updatePasswordError = err.error.message ; this.isLoading = false; }
     })
   }
 
   subscribedSuccessuly(){
-    this.isLoading =false;
+   // this.isLoading =false;
     this._router.navigate(['/auth/login'])
-  }
-
-  get newPassword(){
-    return this.updatePasswordForm.get('newPassword');
-  }
-  get confirmPassword(){
-    return this.updatePasswordForm.get('confirmPassword');
   }
 
 }

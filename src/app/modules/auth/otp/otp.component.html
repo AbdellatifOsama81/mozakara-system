@@ -9,16 +9,19 @@
         </div>
         <p class="text-bold text-end me-5">لقد أرسلنا الي بريدك الالكتروني الأن</p>
         <p class="text-muted text-end me-5">من فضلك قم بإدخال رمز التأكيد المرسل لبريدك الألكتروني</p>
-        <p class="text-end me-5">youremail.com</p>
+        <p class="text-end me-5">{{currentEmail ?? ''}}</p>
       </div>
       <div class="mx-3 text-danger" *ngIf="verificationError">
             {{verificationError}}
       </div>
 <form  [formGroup]="verificationForm" (ngSubmit)="Verify()" class="m-2 ms-2" dir="ltr">
-    <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="config" style="display: flex; justify-content: center;align-items: center;"> </ng-otp-input>
+    <ng-otp-input  (onInputChange)="onOtpChange($event)" class="otp" [config]="config"> </ng-otp-input>
 
-    <div >
-        <button   class="btn btn-primary w-100 mt-4">تأكيد</button>
+    <div>
+        <button class="btn btn-primary w-100 mt-4">
+          <p *ngIf="!isLoading"class="py-1" >تأكيد  </p>
+          <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>  
+        </button>
     </div>
 </form>
 <span class="mt-2 d-flex justify-content-center align-items-center">إعادة إرسال  رمز التأكيد <a routerLink="/auth/otp" class="text-decoration-none text-muted" >او محاولة مرة أخري</a></span>

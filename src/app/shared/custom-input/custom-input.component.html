@@ -1,0 +1,11 @@
+<div class="form-group mb-2" *ngIf="formGroupInput" [formGroup]="formGroupInput">
+    <label class="mb-2">{{label}}</label>
+    <input [type]="type" class="form-control mb-1"  [formControlName]="formControlNameInput">
+    <div *ngIf="formControl.errors && formGroupInput.invalid && formControl?.touched" class="mx-3 text-danger">
+        <p class="mb-0" *ngIf="formControl?.getError('pattern')">min length 10 Invalid phone number</p>
+        <p class="mb-0" *ngIf="formControl?.getError('minlength')">min length 3</p>
+        <p class="mb-0" *ngIf="formControl?.getError('required')">this feild is required</p>
+        <p class="mb-0" *ngIf="formControl?.getError('maxlength')">max length 10</p>
+        <p class="mb-0" *ngIf="formControl?.getError('email')">Invalid email</p>
+    </div>
+</div>

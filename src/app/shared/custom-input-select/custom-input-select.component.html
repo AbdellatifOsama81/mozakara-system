@@ -1,0 +1,13 @@
+<div class="form-group mb-2"*ngIf="formGroupInput" [formGroup]="formGroupInput"> 
+    <label class="mb-2">{{label}}</label>
+    <select class="form-control"  [formControlName]="formControlNameInput">
+        <ng-container  *ngFor="let option of options">
+            <option  [value]="option.value">{{ option.label }}</option>
+        </ng-container>
+    </select>
+     <div *ngIf="formControl.errors && formGroupInput.invalid && formControl?.touched" class="mx-3 text-danger">
+     <!--  <p class="mb-0" *ngIf="control?.getError('minlength')">min length 10</p> -->
+        <p class="mb-0" *ngIf="formControl?.getError('required')">this feild is required</p>
+     <!--  <p class="mb-0" *ngIf="control?.getError('maxlength')">max length 12</p> -->
+    </div>
+</div>

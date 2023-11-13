@@ -12,14 +12,6 @@ export class AuthService {
   userData:BehaviorSubject<any> =new BehaviorSubject(null);
   private _OTPResult!:boolean;
 
-  getComponentName(): string {
-    return localStorage.getItem('componentName') || '';
-  }
-
-  setComponentName(data: string): void {
-    localStorage.setItem('componentName',data)
-  }
-
   constructor(private _http:HttpClient,private _router:Router) { 
     if(this.getToken()){
        this.savedUser();
@@ -70,12 +62,24 @@ export class AuthService {
   getEmail():string {
      return localStorage.getItem("email") || '';
   }
+  
+  remove(key:string):void{
+    localStorage.removeItem(key);
+  }
 
   setOTPResult(result:any) :void {
     this._OTPResult = result;
   }
   getOTPResult():boolean{
     return this._OTPResult;
+  }
+
+  getComponentName(): string {
+    return localStorage.getItem('componentName') || '';
+  }
+
+  setComponentName(data: string): void {
+    localStorage.setItem('componentName',data)
   }
 
 }

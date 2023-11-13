@@ -1,89 +1,126 @@
+*{
+    font-family: Tajawal;
+    box-sizing: border-box;
+}
 
 .all{
     display: flex;
     background-color: #FFF;
     color: black;
-    box-sizing: border-box;
-    padding: 0;
+    padding: 0 ;
     margin: 0;
-    font-family: Tajawal;
+    height: 100%;
 }
 
-.design{
+ .design{
     position: relative;
-    width: 50%;
-    padding: 0;
+    padding: 0 ;
     margin: 0;
-}
+    margin-right: 100px;
+} 
 
 .regist_design{
     position: absolute;
     right: 0;
-    top: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .imgStyle{
   position: sticky;
   top:0;
-  width: 100%;
 }
-.mobileStyle, .head3{
-    margin-top: 15px;
-    margin-bottom: 15px;
+.logo{
+    display: none;
 }
 
 
-p{
-    font-size: 21.323px;
-}
-.forms{
-    width: 50%;
-}
+
+
+
+
 @media only screen and (max-width: 992px){
     .all{
         display: block;
-        background-color: #FFF;
-        color: black;
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        font-family: Tajawal;
     }
     .design{
         width: 100%;
         position: relative;
         padding: 0;
-        margin-top: -167px;
     }
+
     .forms{
-        margin-top: 100px;
+        justify-content: center;
+        align-items: center;
         width: 100%;
+    }
+
+    .regist_design{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        display: block;  
+    }
+
+    .imgStyle,.logobgc{
+        display: none;
+    }
+    
+  
+    .logo{
+        display: block;
+        width: 100%;
+        margin: auto;
+        height: 100px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }   
+}
+
+@media only screen 
+  and (min-width: 993px) 
+  and (max-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+/*     .imgStyle{
+        display: none;
+    }
+    .design{
+        width: 100%;
+        position: relative;
+        padding: 0;
     }
     .regist_design{
         position: relative;
         justify-content: center;
         align-items: center;
         margin: auto;
+        display: block;  
+    }
+
+    .logo{
         display: block;
-      
-    }
-    .dmobileNone, .imgStyle{
-        display: none;
-    }
-  
-    .mobileStyle{
         width: 100%;
         margin: auto;
         height: 100px;
-        
-    }
-    .mobileStyle{
-        margin-bottom: 0;
-    }
-    .head3,p{
-        visibility: hidden;
-    }
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }   
+    .forms{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }  */
+     
+.design{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    margin-right: 100px;
+}
+
+.imgStyle{
+  position: sticky;
+  top:0;
+}  
+
+  
 }

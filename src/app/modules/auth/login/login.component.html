@@ -2,20 +2,46 @@
 <div class="body" dir="rtl">
     
      <div class="form">
-         <h2 class="mb-5">تسجيل دخول</h2>
+         <h2 class="mb-5 text-center">تسجيل دخول</h2>
          <div class="m-3 text-danger" *ngIf="errorForLogin">
              <li>{{errorForLogin}}</li>
          </div>
          <form [formGroup]="loginForm" (ngSubmit)="LoginUser(loginForm)" class=" mx-auto">
-             <div class="form-group mb-4">
+            
+            <app-custom-input [type]="'email'"  [label]="'البريد الألكتروني'"
+            [formGroupInput]="loginForm"
+            [formControlNameInput]="'email'"
+            ></app-custom-input>
+
+            <app-custom-input-password [label]="'كلمة المرور '"
+            [formGroupInput]="loginForm"
+            [formControlNameInput]="'password'" >
+            </app-custom-input-password>
+
+            <div class="my-2">
+                <span ><a routerLink="/auth/forget-password" class="text-decoration-none text-muted">هل نسيت كلمة المرور؟ </a></span>
+            </div>
+            <div >
+                 <button [disabled]="!loginForm.valid" class="btn btn-primary w-100  mx-0">
+                    <p *ngIf="!isLoading"class="py-1">تسجيل دخول</p>
+                    <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>   
+                </button>
+            </div>
+         </form>
+         <span class="mt-2 d-flex justify-content-center align-items-center">ليس لديك حساب؟ <a routerLink="/auth/signup" class="text-decoration-none" style="color: blue;">انشاء حساب جديد</a></span>
+ </div>
+ </div>
+ 
+ 
+  <!--     <div class="form-group mb-2">
                  <label for="email" class="mb-2">البريد الإلكتروني</label>
                  <input type="email" id="email" class="form-control"  formControlName="email">
                  <div *ngIf="email?.errors && email?.touched" class="mx-3 text-danger">
                      <p class="mb-0" *ngIf="email?.getError('required')">this feild is required</p>
                      <p class="mb-0" *ngIf="email?.getError('email')">Invalid email</p>
                  </div>
-             </div>
-             <div class="form-group mb-4">
+             </div> -->
+            <!--  <div class="form-group mb-2">
                  <label for="password" class="mb-2"> كلمة المرور</label>
                  <input type="password" id="password" class="form-control"  formControlName="password">
                  <span class="mt-2 ">  <a routerLink="/auth/forget-password" class="text-decoration-none text-muted">هل نسيت كلمة المرور؟ </a></span>
@@ -23,14 +49,5 @@
                      <p class="mb-0" *ngIf="password?.getError('pattern')">Invalid password</p>
                      <p class="mb-0" *ngIf="password?.getError('required')">this feild is required</p>
                  </div>
-             </div>   
-             <div >
-                 <button [disabled]="!loginForm.valid" class="btn btn-primary w-100  mx-0">تسجيل دخول</button>
-             </div>
-         </form>
-         <span class="mt-2 d-flex justify-content-center align-items-center">ليس لديك حساب؟ <a routerLink="/auth/signup" class="text-decoration-none" style="color: blue;">انشاء حساب جديد</a></span>
- </div>
- </div>
- 
- 
- 
+             </div>    -->
+          

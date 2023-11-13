@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -12,8 +13,8 @@ export class SignUpComponent implements OnInit{
 
   isLoading:boolean=false;
   errorForSignUp:string=''
-  roles:any=[]
-  countryCodes :any=[]
+  roles: { value: any, label: string }[] = [];
+  countries:  { value: any, label: string }[] = [];
   password: string='';
   confirmPassword:string=''
   showPassword: boolean = false;
@@ -34,6 +35,11 @@ export class SignUpComponent implements OnInit{
       countryCode : ['', [Validators.required]],
       })
   }
+
+  genders: { value: any, label: string }[] = [
+    { value: 'male', label: 'Male' },
+    {value: 'female', label: 'Female'}
+  ]
   
   ngOnInit(): void {
     this.getCountries()
@@ -49,14 +55,14 @@ export class SignUpComponent implements OnInit{
   
   getRoles(){
     this._auth.getRoles().subscribe(
-      (roles) =>{ this.roles = roles },
+      (roles) =>{ this.roles = roles.map((role:any) => ({ value: role.name, label: role.name })); },
       (error)=>{ this.errorForSignUp = error }
     )
   }
 
   getCountries(){
     this._auth.getCountryCodes().subscribe(
-      (countries) =>{ this.countryCodes = countries.data },
+      (countries) =>{ this.countries = countries.data.map((country:any) => ({value:country.countryCode, label:country.countryName})) },
       (error)=>{ this.errorForSignUp = error }
     ) 
   }
@@ -66,18 +72,18 @@ export class SignUpComponent implements OnInit{
     this.isLoading =true;
     if(this.signUpForm.valid){
        this._auth.signup(this.signUpForm.value).subscribe({
-        next:(data:any) => { this.navigateToOTP() },
+        next:(data:any) => { this.navigateToOTP() ; this.isLoading=false},
         error:(error:any) => { this.takeError(error) }
       }); 
     } 
   }
 
-  navigateToOTP(){
+  private navigateToOTP(){
     localStorage.setItem("email",this.signUpForm.value.email)
            this._router.navigate(['/auth/otp']) 
   }
 
-  takeError(error:any){
+  private takeError(error:any){
     this.isLoading =false;
     this.errorForSignUp = error?.error.message
   }
@@ -89,10 +95,10 @@ export class SignUpComponent implements OnInit{
 
 
 
-  get firstName(){
-    return this.signUpForm.get('firstName')
+   getControl(name: string){
+    return this.signUpForm.get(name) as FormControl
   }
-  get secondName(){
+/*   get secondName(){
     return this.signUpForm.get('secondName')
   }
   get familyName(){
@@ -103,7 +109,7 @@ export class SignUpComponent implements OnInit{
   }
   get phoneNumber(){
     return this.signUpForm.get('phoneNumber')
-  }
+  } 
   get gender(){
     return this.signUpForm.get('gender')
   }
@@ -119,5 +125,7 @@ export class SignUpComponent implements OnInit{
   get countryCode(){
     return this.signUpForm.get('countryCode')
   }
+*/
+
 
 }
