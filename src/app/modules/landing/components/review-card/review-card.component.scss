@@ -1,0 +1,35 @@
+@import '../../landing.component.scss';
+
+$my-dark-green: #146C70;
+$my-gray: #4E5566;
+
+.review-card-container {
+    border-radius: 25px;
+    box-shadow: 0 4px 120px 0 rgba(58, 86, 78, 0.15);
+}
+
+.review-author {
+    color: $my-dark-green;
+    font-weight: 700;
+}
+
+.review-text {
+    color: $my-gray;
+    font-weight: 300;
+}
+
+p {
+    font-size: larger;
+}
+
+i {
+    font-size: 400%;
+    top: -45px;
+    left: -5px;
+}
+
+@include maxBreakpoint(400px) {
+    p {
+        font-size: large;
+    }
+}

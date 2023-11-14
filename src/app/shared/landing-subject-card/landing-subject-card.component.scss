@@ -1,0 +1,20 @@
+@import 'src/style/styles.scss';
+
+$my-gray: #4E5566;
+$my-super-light-gray: #d3d3d3;
+
+.card-main-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+p {
+    font-size: large;
+    color: $my-super-light-gray
+}
+
+i {
+    font-size: x-large;
+    color: $dark;
+}

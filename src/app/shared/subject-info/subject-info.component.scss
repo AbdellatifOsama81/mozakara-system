@@ -1,0 +1,30 @@
+@import 'src/style/styles.scss';
+
+$my-gray: #4E5566;
+$my-dark-blue: #003456;
+$my-pill-blue: #6BD0FD3D;
+$my-super-light-gray: #d3d3d3;
+
+
+.pill {
+    background-color: $my-pill-blue;
+    border-radius: 20px;
+    width: max-content;
+    color: $primary;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+.subject-card-title {
+    color: $my-dark-blue;
+    font-weight: bold;
+}
+
+.subject-card-text {
+    color: $my-super-light-gray;
+}
+
+.price-label {
+    color: $primary;
+    font-weight: 900;
+}

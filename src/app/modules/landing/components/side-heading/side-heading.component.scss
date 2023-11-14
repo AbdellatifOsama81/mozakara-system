@@ -1,0 +1,13 @@
+@import 'src/style/styles.scss';
+
+$my-third-blue: #3290FF;
+
+.blue-label {
+    color: $my-third-blue;
+    font-weight: bold;
+}
+
+.dark-subtitle {
+    color: $dark;
+    font-weight: bold;
+}

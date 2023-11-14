@@ -1,0 +1,95 @@
+@import '../../landing.component.scss';
+
+.main-title {
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.btn {
+    border-radius: 40px;
+
+    p {
+        font-size: small;
+        font-weight: 600;
+    }
+}
+
+p {
+    font-weight: 500;
+    font-size: larger;
+}
+
+.hero-container {
+    height: 115vh;
+
+    .ellipse-container {
+        width: 100%;
+    }
+}
+
+.ellipse-container {
+    position: absolute;
+    top: -10em;
+    left: 0;
+    z-index: -2;
+
+    img {
+        width: 100%;
+    }
+}
+
+.small-images-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    img {
+        width: 100%;
+    }
+}
+
+.hero-img-container {
+    position: absolute;
+    bottom: 0vh;
+}
+
+.main-container {
+    z-index: 1;
+}
+
+@include minBreakpoint(1400px) {
+    .hero-img-container {
+        bottom: -20vh;
+    }
+}
+
+@include tablet {
+    .hero-container {
+        height: 85vh;
+    }
+
+    .ellipse-container {
+        top: 0;
+    }
+
+    .hero-img-container {
+        height: 50%;
+        bottom: 0vh;
+    }
+
+    .main-title {
+        font-size: 40px;
+    }
+}
+
+@include mobile {
+    .main-title {
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    .hero-img-container {
+        height: 40%;
+    }
+}

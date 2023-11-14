@@ -1,68 +1,30 @@
 <div class="p-3 card-main-container">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex overflow-hidden justify-content-center">
         <img [src]="assetsPath +'/subject-img.png'" alt="subject-img">
     </div>
     <app-subject-info></app-subject-info>
     <div *ngIf="showProgress; else hiddenProgress" id="noProgress">
-        <app-subject-progress [progress]="65"></app-subject-progress>
+        <app-subject-progress [progress]="progress"></app-subject-progress>
         <div class="d-flex justify-content-center">
-            <a href="#" class="btn btn-primary px-4 w-100">متابعة التقدم</a>
+            <!-- <a href="#" class="btn btn-primary px-4 w-100">متابعة التقدم</a> -->
+            <a href="#" type="button" class="btn btn-primary px-5 p-2 w-100">
+                <p class="m-1">
+                    متابعة التقدم
+                </p>
+            </a>
         </div>
     </div>
     <ng-template #hiddenProgress>
         <div class="d-flex justify-content-between align-items-center px-2">
             <p class="progress-success-label pt-2">
-                <b>
-                    24% منتهي
-                </b>
+                24% منتهي
             </p>
-            <a href="#" class="btn btn-primary px-4">متابعة التقدم</a>
+            <!-- <a href="#" class="btn btn-primary w-100 px-4">متابعة التقدم</a> -->
+            <a href="#" type="button" class="btn btn-primary px-5 p-2 w-100">
+                <p class="m-1">
+                    متابعة التقدم
+                </p>
+            </a>
         </div>
     </ng-template>
 </div>
-
-<!-- GRID SYSTEM  -->
-<!-- <div class="p-3 card-main-container">
-    <div class="row justify-content-center">
-        <img [src]="assetsPath +'/subject-img.png'" class="" alt="subject-img">
-    </div>
-    <div class="row justify-content-end">
-        <p class="pill p-2 mt-2">
-            <b>
-                الصف الأول الإعدادي
-            </b>
-        </p>
-    </div>
-    <div class="row text-end">
-        <h5 class="subject-card-title">
-            <b>
-                اسم المادة
-            </b>
-        </h5>
-    </div>
-    <div class="row justify-content-end text-end">
-        <p class="subject-card-text">يتفاعل الطلاب مع المعلم بالكتابة والصوت وحل الأسئلة والاختبارات</p>
-    </div>
-    <div *ngIf="showProgress; else hiddenProgress" id="noProgress">
-        <div class="row justify-content-center align-items-center">
-            <p class="progress-label col align-items-center">12% منتهي</p>
-            <div class="col align-items-center">
-                <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                    aria-valuemax="100" dir="rtl">
-                    <div class="progress-bar" style="width: 50%"></div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row justify-content-center">
-            <a href="#" class="btn btn-primary px-4 w-100">متابعة التقدم</a>
-        </div>
-    </div>
-    <ng-template #hiddenProgress>
-        <div class="row justify-content-between">
-            <p class="progress-label">12% منتهي</p>
-            <a href="#" class="btn btn-primary px-4">متابعة التقدم</a>
-        </div>
-    </ng-template>
-</div> -->

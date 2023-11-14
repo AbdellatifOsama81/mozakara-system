@@ -4,32 +4,43 @@
     text-align: end;
 }
 
-label {
-    font-size: small;
-}
+// label {
+//     font-size: small;
+// }
 
-input,
-select {
-    border-radius: 30px;
-    border: 1px solid #D1D1D1;
-    background-color: white;
-    color: $my-gray;
-}
+// input,
+// select {
+//     border-radius: 30px;
+//     border: 1px solid #D1D1D1;
+//     background-color: white;
+//     color: $my-gray;    
+//     /*remove default arrow*/
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     appearance: none;
+// }
 
-select:hover {
-    cursor: pointer;
-}
+// select:hover {
+//     cursor: pointer;
+// }
 
 #subject-name {
     text-align: start;
-    // font-family: bootstrap-icons !important;
 }
 
-.search-contianer {
-    position: relative;
-    i {
-        position: absolute;
-        top:50%;
-        align-self: flex-end;
-    }
-}
+// .search-contianer {
+//     position: relative;
+
+//     i {
+//         position: absolute;
+//         top: 50%;
+//         align-self: flex-end;
+//     }
+// }
+
+// .select-contianer {
+//     i {
+//         left: 3%;
+//         cursor: pointer;
+//     }
+// }

@@ -1,0 +1,11 @@
+@import '../../landing.component.scss';
+
+.btn {
+    border-radius: 40px;
+    color: $primary;
+    font-weight: 600;
+
+    &:hover {
+        color: $primary;
+    }
+}

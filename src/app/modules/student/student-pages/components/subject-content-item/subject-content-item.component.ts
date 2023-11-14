@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-subject-content-item',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./subject-content-item.component.scss']
 })
 export class SubjectContentItemComponent {
-  assetsPath = '../../../../../../assets/images/student/';
+  assetsPath = environment.imgAssetsPath + '/student';
 }

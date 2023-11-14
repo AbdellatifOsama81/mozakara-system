@@ -1,12 +1,21 @@
 @import '../../../student.component.scss';
 
+// .btn {
+//     background-color: $my-third-blue;
+//     border-color: $my-third-blue;
+//     border-radius: 20px;
+// }
+
 .btn {
     background-color: $my-third-blue;
     border-color: $my-third-blue;
-    border-radius: 20px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .progress-success-label {
     color: $my-success;
     font-size: small;
+    font-weight: bold;
 }

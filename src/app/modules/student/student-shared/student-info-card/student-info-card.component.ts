@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { Page } from 'src/app/core/student/Page';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-student-info-card',
@@ -8,32 +8,34 @@ import { Page } from 'src/app/core/student/Page';
   styleUrls: ['./student-info-card.component.scss']
 })
 export class StudentInfoCardComponent {
-  assetsPath = '../../../../../assets/images/student';
+  assetsPath = environment.imgAssetsPath + '/student';
   studentPagesUrl = '/student/pages';
   currentRoute!: string;
 
-  pages: Page[] = [
+  pages = [
     {
-      name: 'الرئيسية',
-      url: 'home'
-    },
-    {
-      name: 'مهمات ليست مكتملة',
-      url: 'in-progress'
-    },
-    {
-      name: 'مهام مكتملة',
-      url: 'completed-subjects'
+      name: 'متابعاتي',
+      url: 'following'
     },
     {
       name: 'اختبر نفسك',
       url: 'tests'
     },
     {
-      name: 'متابعاتي',
-      url: 'following'
+      name: 'مهام مكتملة',
+      url: 'completed-subjects'
+    },
+
+    {
+      name: 'مهمات ليست مكتملة',
+      url: 'in-progress'
+    },
+    {
+      name: 'الرئيسية',
+      url: 'home'
     },
   ];
+
 
   constructor(private router: Router) {
     //this is to handle state:active for the nav-links

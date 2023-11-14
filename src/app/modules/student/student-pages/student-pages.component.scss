@@ -2,19 +2,19 @@
 
 .content-section {
     background-color: $my-background-white;
-    margin-top: 10em;
-    padding-top: 10em;
+    position: absolute;
+    top: 40vh;
 }
-.my-background {
+
+.my-container {
     background-color: $secondary;
-    padding-bottom: 5em;
+    height: 50vh;
 }
-// .my-container{
-//     position: relative;
-// }
-app-student-info-card{
+
+app-student-info-card {
     position: absolute;
     top: 5em;
     left: 0;
     right: 0;
+    z-index: 1;
 }

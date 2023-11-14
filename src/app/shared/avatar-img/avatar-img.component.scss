@@ -1,0 +1,11 @@
+@import 'src/style/styles.scss';
+
+.avatar-img-container {
+    border-radius: 50%;
+    // background-color: $my-light-blue;
+
+    img {
+        border-radius: 50%;
+    }
+
+}

@@ -1,0 +1,45 @@
+@import '../../landing.component.scss';
+
+$my-medium-gray: #7E7E7E;
+$my-icon-bg: #9797971F;
+
+.teacher-card-container {
+    border-radius: 20px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+
+    &:hover {
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+p {
+    font-size: small;
+    color: $my-medium-gray;
+
+    &.teacher-label {
+        font-weight: bold;
+    }
+
+    &.teacher-name {
+        color: $dark;
+        font-weight: 600;
+        font-size: large;
+    }
+}
+
+.see-more-btn {
+    text-decoration: none;
+    font-weight: 600;
+    color: $primary;
+}
+
+.btn {
+    border-radius: 50%;
+    color: $primary;
+    background-color: $my-icon-bg;
+
+    &:hover {
+        color: $primary;
+    }
+}

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-subject-vertical-card',
@@ -7,5 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SubjectVerticalCardComponent {
   @Input() showProgress: boolean = false;
-  assetsPath = '../../../../../../assets/images/student/';
+  @Input() progress: number = 0;
+
+  assetsPath = environment.imgAssetsPath;
 }

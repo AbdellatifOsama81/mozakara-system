@@ -1,0 +1,18 @@
+@import '../../modules/student/student.component.scss';
+
+i {
+
+    color: $primary;
+
+    &.empty {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+p {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}

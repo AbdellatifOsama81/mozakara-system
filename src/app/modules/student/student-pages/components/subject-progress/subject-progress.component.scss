@@ -3,23 +3,27 @@
 .progress-label {
     color: $dark;
     font-size: small;
+    font-weight: bold;
 }
-
-// .full {
-//     color: $my-success;
-// }
 
 progress {
     border-radius: 7px;
     height: 0.4em;
+
+    &::-webkit-progress-bar {
+        background-color: $my-light-gray;
+        border-radius: 7px;
+    }
+
+    &::-webkit-progress-value {
+        background-color: $dark;
+        border-radius: 7px;
+    }
 }
 
-progress::-webkit-progress-bar {
-    background-color: $my-light-gray;
-    border-radius: 7px;
+.success{
+    color: $my-success;
 }
-
-progress::-webkit-progress-value {
-    background-color: $dark;
-    border-radius: 7px;
+progress.success::-webkit-progress-value {
+    background-color: $my-success;
 }

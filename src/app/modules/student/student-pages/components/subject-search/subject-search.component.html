@@ -1,53 +1,107 @@
-<div class="d-flex justify-content-end">
-    <h2> (957) المواد</h2>
-</div>
-<div class="d-flex justify-content-between">
-    <div class="col flex-column d-flex p-1">
-        <label for="select-sort">
-            اختر المعلم
-        </label>
-        <select name="select-sort" id="select-sort" class="p-2">
-            <option selected>
-                المعلم
-            </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-    </div>    
-    <div class="col flex-column d-flex p-1">
-        <label for="select-sort">
-            الحالة
-        </label>
-        <select name="select-sort" id="select-sort" class="p-2">
-            <option selected>
-                جميع المواد
-            </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-    </div>    
-    <div class="col flex-column d-flex p-1">
-        <label for="select-sort">
-            مصنفة
-        </label>
-        <select name="select-sort" id="select-sort" class="p-2">
-            <option selected>
-                الأخيرة
-            </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-    </div>    
-    <div class="col-5 flex-column d-flex p-1 search-contianer">
-        <label for="subject-name">
-            البحث
-        </label>
-        <i class="bi bi-search pe-3"></i>
-        <input type="text" id="subject-name" class="p-2 pe-5" formControlName="subject-name"
-            placeholder="ابحث عن المادة المطلوبة" dir="rtl">
+<div class="col justify-content-between align-items-center mb-4 p-4">
+    <div class="d-flex justify-content-end py-3">
+        <h2 class="primary-subtitle"> (957) المواد</h2>
     </div>
-
+    <form class="form" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+        <div class="d-flex justify-content-between gap-2">
+            <div class="col">
+                <app-select 
+                    [parentFormGroup]="searchForm" 
+                    myFormControlName="teacher" 
+                    label="اختر المعلم"
+                    defaultOption="المعلم" 
+                    [options]="teachers"
+                ></app-select>
+            </div>
+            <div class="col">
+                <app-select 
+                    [parentFormGroup]="searchForm" 
+                    myFormControlName="status" 
+                    label="الحالة"
+                    defaultOption="جميع المواد" 
+                    [options]="statuses"
+                ></app-select>
+            </div>
+            <div class="col">
+                <app-select 
+                    [parentFormGroup]="searchForm" 
+                    myFormControlName="sort" 
+                    label="مصنفة"
+                    defaultOption="الأخيرة" 
+                    [options]="sortTypes"
+                ></app-select>
+            </div>
+            
+            <!-- <div class="col flex-column d-flex search-contianer select-contianer p-1">
+                <label>
+                    اختر المعلم
+                </label>
+                <i class="bi bi-chevron-down pe-3"></i>
+                <select class="p-2" [formGroup]="searchForm" formControlName="teacher">
+                    <option disabled selected hidden [ngValue]="null">
+                        المعلم
+                    </option>
+                    <option *ngFor="let teacher of teachers" [ngValue]="teacher">
+                        {{ teacher }}
+                    </option>
+                </select>
+            </div> -->
+            <div class="col-5 flex-column d-flex search-contianer p-1">
+                <label for="subject-name">
+                    البحث
+                </label>
+                <i class="bi bi-search pe-3"></i>
+                <input type="text" id="subject-name" class="p-2 pe-5" formControlName="keyword"
+                    [class.invalid]="isInvalid('keyword')" placeholder="ابحث عن المادة المطلوبة" dir="rtl">
+            </div>
+        </div>
+    </form>
+    <!-- <div class="col flex-column d-flex p-1">
+            <label for="select-sort">
+                اختر المعلم
+            </label>
+            <select name="select-sort" id="select-sort" class="p-2">
+                <option selected>
+                    المعلم
+                </option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col flex-column d-flex p-1">
+            <label for="select-sort">
+                الحالة
+            </label>
+            <select name="select-sort" id="select-sort" class="p-2">
+                <option selected>
+                    جميع المواد
+                </option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col flex-column d-flex p-1">
+            <label for="select-sort">
+                مصنفة
+            </label>
+            <select name="select-sort" id="select-sort" class="p-2">
+                <option selected>
+                    الأخيرة
+                </option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col-5 flex-column d-flex p-1 search-contianer">
+            <label for="subject-name">
+                البحث
+            </label>
+            <i class="bi bi-search pe-3"></i>
+            <input type="text" id="subject-name" class="p-2 pe-5" formControlName="subject-name"
+                placeholder="ابحث عن المادة المطلوبة" dir="rtl">
+        </div> -->
+    <!-- </div> -->
 </div>

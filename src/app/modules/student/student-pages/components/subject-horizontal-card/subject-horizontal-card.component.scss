@@ -3,10 +3,24 @@
 .btn {
     background-color: $my-third-blue;
     border-color: $my-third-blue;
-    border-radius: 50px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 14px;
 }
+
 .accordion-btn{
     color: $my-third-blue;
+}
+
+// .accordion-btn.active{
+//     rotate: 180deg;
+// }
+
+@include minMaxBreakpoint(940px, 1240px){
+    .accordion-btn{
+        font-size: 80%;
+        white-space: nowrap;
+    }
 }
 
 @include tablet{
@@ -15,7 +29,7 @@
     }
     .card-actions-container{
         flex-direction:column;
-        .col-5{ //todo-maybe use n-th child
+        .col-5{
             width: 100%;
         }
         .col{

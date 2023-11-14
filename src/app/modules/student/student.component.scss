@@ -1,27 +1,34 @@
-@import '../../../style/styles.scss';
+@import 'src/style/styles.scss';
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500&display=swap');
 
-$my-third-blue: #3290FF;
+
 $my-gray: #4E5566;
+$my-medium-gray: #6E7485;
 $my-light-gray: #C7C7C7;
+$my-super-light-gray: #d3d3d3;
+$my-background-white: #F2F2F2;
+$my-lr-background: #f9f9fb;
+
 $my-dark-blue: #003456;
+$my-third-blue: #3290FF;
 $my-light-blue: #B4D1C4;
+
 $my-pill-blue: #6BD0FD3D;
 $my-success: #23BD33;
-$my-background-white: #F2F2F2;
-
-
 
 * {
-    font-family: 'Tajawal', sans-serif !important;
+    font-family: 'Tajawal' !important;
 }
 
 .primary-subtitle {
     color: $dark;
+    font-size: 22.5px;
+    font-weight: 700;
 }
 
 .subject-card-title {
     color: $my-dark-blue;
+    font-weight: bold;
 }
 
 .subject-card-text {
@@ -36,4 +43,43 @@ $my-background-white: #F2F2F2;
 
 a {
     text-decoration: none;
+}
+
+
+label {
+    font-size: small;
+}
+
+input,
+select,
+option {
+    border-radius: 15px;
+    border: 1px solid #D1D1D1;
+    background-color: white;
+    color: $my-gray;
+    /*remove default arrow*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+.search-contianer {
+    position: relative;
+
+    i {
+        position: absolute;
+        top: 50%;
+        align-self: flex-end;
+    }
+}
+
+.select-contianer {
+    i {
+        left: 10%;
+        cursor: pointer;
+    }
 }
