@@ -1,9 +1,9 @@
 @import '../../../student.component.scss';
 
 .btn-view-toggle{
-    color: $my-gray !important;
-    background-color: $my-background-white !important;
-    border-color: $my-background-white !important;
+    color: $darkGray !important;
+    background-color: $backgroundGray !important;
+    border-color: $backgroundGray !important;
 }
 .btn-view-toggle.active{
     color: white !important;

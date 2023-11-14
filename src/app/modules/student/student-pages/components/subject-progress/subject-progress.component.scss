@@ -11,7 +11,7 @@ progress {
     height: 0.4em;
 
     &::-webkit-progress-bar {
-        background-color: $my-light-gray;
+        background-color: $lightGray;
         border-radius: 7px;
     }
 
@@ -22,8 +22,8 @@ progress {
 }
 
 .success{
-    color: $my-success;
+    color: $successGreen;
 }
 progress.success::-webkit-progress-value {
-    background-color: $my-success;
+    background-color: $successGreen;
 }

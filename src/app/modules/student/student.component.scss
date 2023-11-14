@@ -1,21 +1,6 @@
 @import 'src/style/styles.scss';
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500&display=swap');
 
-
-$my-gray: #4E5566;
-$my-medium-gray: #6E7485;
-$my-light-gray: #C7C7C7;
-$my-super-light-gray: #d3d3d3;
-$my-background-white: #F2F2F2;
-$my-lr-background: #f9f9fb;
-
-$my-dark-blue: #003456;
-$my-third-blue: #3290FF;
-$my-light-blue: #B4D1C4;
-
-$my-pill-blue: #6BD0FD3D;
-$my-success: #23BD33;
-
 * {
     font-family: 'Tajawal' !important;
 }
@@ -27,12 +12,12 @@ $my-success: #23BD33;
 }
 
 .subject-card-title {
-    color: $my-dark-blue;
+    color: $darkBlue;
     font-weight: bold;
 }
 
 .subject-card-text {
-    color: $my-gray;
+    color: $darkGray;
 }
 
 .card-main-container {
@@ -56,7 +41,7 @@ option {
     border-radius: 15px;
     border: 1px solid #D1D1D1;
     background-color: white;
-    color: $my-gray;
+    color: $darkGray;
     /*remove default arrow*/
     -webkit-appearance: none;
     -moz-appearance: none;

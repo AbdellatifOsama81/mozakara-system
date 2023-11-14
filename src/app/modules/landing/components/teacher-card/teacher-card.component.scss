@@ -1,6 +1,5 @@
 @import '../../landing.component.scss';
 
-$my-medium-gray: #7E7E7E;
 $my-icon-bg: #9797971F;
 
 .teacher-card-container {
@@ -15,7 +14,7 @@ $my-icon-bg: #9797971F;
 
 p {
     font-size: small;
-    color: $my-medium-gray;
+    color: $mediumGray;
 
     &.teacher-label {
         font-weight: bold;

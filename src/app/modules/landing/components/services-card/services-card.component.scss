@@ -1,9 +1,5 @@
 @import '../../landing.component.scss';
 
-$my-gray: #4E5566;
-$my-light-blue: #B4D1C4;
-
-
 .services-card-container {
     border-radius: 40px;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
@@ -14,7 +10,7 @@ $my-light-blue: #B4D1C4;
 }
 
 p {
-    color: $my-gray;
+    color: $darkGray;
 }
 
 .dark-subtitle {

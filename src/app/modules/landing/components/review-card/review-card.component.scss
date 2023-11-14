@@ -1,7 +1,6 @@
 @import '../../landing.component.scss';
 
 $my-dark-green: #146C70;
-$my-gray: #4E5566;
 
 .review-card-container {
     border-radius: 25px;
@@ -14,7 +13,7 @@ $my-gray: #4E5566;
 }
 
 .review-text {
-    color: $my-gray;
+    color: $darkGray;
     font-weight: 300;
 }
 
