@@ -2,9 +2,11 @@
 
 .avatar-img-container {
     border-radius: 50%;
+    aspect-ratio: 1/1;
 
     img {
         border-radius: 50%;
+        height: 100%;
     }
 
 }

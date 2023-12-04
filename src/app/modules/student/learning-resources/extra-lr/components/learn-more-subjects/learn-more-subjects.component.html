@@ -1,0 +1,15 @@
+<div class="d-flex flex-column py-4 gap-3">
+    <div class="d-flex justify-content-between">
+        <app-circular-arrow-buttons></app-circular-arrow-buttons>
+        <h2 class="big-side-title">
+            تعلم المزيد
+        </h2>
+    </div>
+    <div class="d-flex row row-cols-3 g-3">
+        <app-landing-subject-card *ngFor="let subject of learnMoreSubjects"
+            [imageRelativePath]="'/learning-resources/' + subject.imgName" [subjectName]="subject.name"
+            [subjectStudyLevel]="subject.studyLevel" [subjectDescription]="subject.description"
+            [subjectRating]="subject.rating" [subjectViews]="subject.views"
+            [subjectNumberOfStudents]="subject.numberOfStudents"></app-landing-subject-card>
+    </div>
+</div>

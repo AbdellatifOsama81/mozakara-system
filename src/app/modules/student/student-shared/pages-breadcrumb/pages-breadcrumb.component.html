@@ -1,0 +1,7 @@
+<div class="pb-2">
+    <ol class="breadcrumb d-flex justify-content-start column-gap-1 mb-0" dir="rtl">
+        <li *ngFor="let page of pages; index as i" class="px-3" [class.pe-0]="i===0" [routerLink]="page.url">
+            <a>{{page.name}}</a>
+        </li>
+    </ol>
+</div>

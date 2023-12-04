@@ -1,0 +1,22 @@
+<div class="teacher-info-container d-flex justify-content-between align-items-end gap-3">
+    <div class="teacher-rating-container d-flex align-items-center gap-0 gap-sm-2">
+        <div class="d-flex gap-1 gap-sm-2">
+            <p class="label m-0" dir="rtl">
+                ({{numberOfRatings | number}} تقييم)
+            </p>
+            <p class="m-0">{{teacherRating | number:'1.2-2'}}</p>
+        </div>
+        <app-rating-stars [rating]="teacherRating"></app-rating-stars>
+    </div>
+    <div class="d-flex justify-content-end gap-3">
+        <div class="d-flex flex-column justify-content-center text-end">
+            <p class="label mb-0" dir="rtl">
+                اسم المعلم:
+            </p>
+            <p class="name mb-0">
+                {{teacherName}}
+            </p>
+        </div>
+        <app-avatar-img [imageRelativePath]="teacherImageRelativePath" width="60px"></app-avatar-img>
+    </div>
+</div>

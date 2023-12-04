@@ -1,0 +1,35 @@
+@import '../../extra-lr.component.scss';
+
+.card-main-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+    border-radius: 22px;
+}
+
+p {
+    font-size: large;
+    color: $superLightGray
+}
+
+i {
+    font-size: x-large;
+    color: $dark;
+}
+
+.stats-container {
+    border-top: 1px solid $backgroundGray;
+}
+
+.btn {
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 14px;
+
+    &.btn-secondary {
+        color: $primary;
+    }
+}

@@ -7,3 +7,9 @@
 #subject-name {
     text-align: start;
 }
+
+@include maxBreakpoint(767px) {
+    .search-fields-container {
+        flex-direction: column-reverse;
+    }
+}

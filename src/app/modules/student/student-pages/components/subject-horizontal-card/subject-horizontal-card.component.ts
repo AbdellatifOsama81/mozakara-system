@@ -1,4 +1,5 @@
 import { Component, HostListener, Input } from '@angular/core';
+import { StudySubject } from 'src/app/core/interfaces/learning-resources/study-subject';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -8,19 +9,12 @@ import { environment } from 'src/environments/environment';
 })
 export class SubjectHorizontalCardComponent {
   @Input() progress: number = 0;
+  @Input() subject!: StudySubject;
 
   assetsPath = environment.imgAssetsPath;
   expanded = false;
-  // largeScreen=false;
 
   rotateButton() {
     this.expanded = !this.expanded;
   }
-
-  // @HostListener('window:resize', ['$event'])
-  // onResize(event: Event): void {
-  //   this.largeScreen = window.innerWidth > 922;
-
-  // }
-
 }

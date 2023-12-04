@@ -1,12 +1,13 @@
 <app-subject-search></app-subject-search>
-<div class="col mb-4 p-4 justify-content-center">
+<div class="d-flex flex-column gap-2 gap-sm-3 mb-4">
     <div class="d-flex justify-content-between">
         <div>
             <app-arrow-buttons></app-arrow-buttons>
         </div>
-        <h3 class="primary-subtitle">
+        <h3 class="primary-subtitle text-end">
             مهمات مكتملة
         </h3>
     </div>
+    <!-- <app-subject-card-grid *ngIf="subjects" [subjects]="subjects"></app-subject-card-grid> -->
     <app-subject-card-grid></app-subject-card-grid>
 </div>

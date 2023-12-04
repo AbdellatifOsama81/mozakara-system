@@ -1,0 +1,17 @@
+@import '../../extra-lr.component.scss';
+
+.btn {
+    border-radius: 100%;
+    font-size: 20px;
+
+    &.btn-secondary,  &.btn-secondary:active{
+        color: $primary !important;
+    }
+
+    &.btn-primary {
+        color: white;
+    }
+}
+i::before{
+    vertical-align: middle !important;
+}

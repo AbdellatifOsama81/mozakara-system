@@ -2,13 +2,13 @@
 
 .progress-label {
     color: $dark;
-    font-size: small;
+    font-size: 12px;
     font-weight: bold;
 }
 
 progress {
     border-radius: 7px;
-    height: 0.4em;
+    height: 6px;
 
     &::-webkit-progress-bar {
         background-color: $lightGray;
@@ -21,9 +21,19 @@ progress {
     }
 }
 
-.success{
+.success {
     color: $successGreen;
 }
+
 progress.success::-webkit-progress-value {
     background-color: $successGreen;
+}
+
+@include mobile {
+    .progress-label {
+        font-size: 8px;
+    }
+    progress{
+        height: 4px;
+    }
 }

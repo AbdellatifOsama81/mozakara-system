@@ -1,0 +1,39 @@
+@import '../../default-lr.component.scss';
+
+.add-comment-container {
+    border: 1px solid $superLightGray;
+    background-color: white;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn {
+    border-radius: 40px;
+
+    p {
+        font-weight: 600;
+    }
+}
+
+textarea {
+    border: none;
+    caret-color: $primary;
+
+    &::placeholder {
+        text-align: right;
+    }
+}
+
+@include mobile {
+    .name {
+        font-size: 12px;
+    }
+
+    .btn,
+    textarea {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,50 @@
+<!-- <div class="d-flex flex-column gap-4">
+    <app-teacher-info
+        [teacherName] = "teacher.name"
+        [teacherRating]="teacher.rating"
+        [numberOfRatings]="teacher.numberOfRatings"
+        [teacherImageRelativePath]="teacher.imageRelativePath"
+    ></app-teacher-info>
+    <app-lr-material materialType="document" [lrLink]="lrLink"></app-lr-material>
+    <app-lr-material materialType="links" [lrLink]="lrLink"></app-lr-material>
+    <app-lr-material materialType="image" [lrLink]="lrLink"></app-lr-material>
+    <app-lr-material materialType="video" [lrLink]="lrLink"></app-lr-material>
+    <app-description-rating-section
+        [descriptionText]="descriptionText"
+    ></app-description-rating-section>
+</div> -->
+
+
+<div class="lr-container d-flex gap-2 p-3 p-lg-5">
+    <div class="side-lr-plan col-lg-4">
+        <app-subject-plan-card [subject]="subject"></app-subject-plan-card>
+    </div>
+    <div class="col-12 col-lg-8 d-flex flex-column gap-3">
+        <app-pages-breadcrumb [pages]="pages" ></app-pages-breadcrumb>
+        <app-progress-stepper [steps]="learningResources"></app-progress-stepper>
+        <app-lr-info 
+            [lrName]="lrName"
+            [topicName]="topicName"
+            [unitName]="unitName"
+            [subjectName]="subject.name"
+        ></app-lr-info>
+        <div class="d-flex flex-column gap-4">
+            <app-teacher-info
+                [teacherName] = "teacher.name"
+                [teacherRating]="teacher.rating"
+                [numberOfRatings]="teacher.numberOfRatings"
+                [teacherImageRelativePath]="teacher.imageRelativePath"
+            ></app-teacher-info>
+            <app-lr-material materialType="document" [lrLink]="lrLink"></app-lr-material>
+            <!-- <app-lr-material materialType="links" [lrLink]="lrLink"></app-lr-material>
+            <app-lr-material materialType="image" [lrLink]="lrLink"></app-lr-material>
+            <app-lr-material materialType="video" [lrLink]="lrLink"></app-lr-material> -->
+            <div class="wide-lr-plan col-lg-4">
+                <app-subject-plan-card [subject]="subject"></app-subject-plan-card>
+            </div>
+            <app-description-rating-section
+                [descriptionText]="descriptionText"
+            ></app-description-rating-section>
+        </div>
+    </div>
+</div>

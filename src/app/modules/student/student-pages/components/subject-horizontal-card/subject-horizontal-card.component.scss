@@ -8,33 +8,16 @@
     font-size: 14px;
 }
 
-.accordion-btn{
+.accordion-btn {
     color: $brightBlue;
 }
 
-// .accordion-btn.active{
-//     rotate: 180deg;
-// }
+@include mobile {
+    .card-actions-container {
 
-@include minMaxBreakpoint(940px, 1240px){
-    .accordion-btn{
-        font-size: 80%;
-        white-space: nowrap;
-    }
-}
-
-@include tablet{
-    .card-main-container{
-        padding: 0;
-    }
-    .card-actions-container{
-        flex-direction:column;
-        .col-5{
-            width: 100%;
-        }
-        .col{
-            width: 100;
-            margin: 0;
+        .btn,
+        .accordion-btn {
+            font-size: 10px;
         }
     }
 }

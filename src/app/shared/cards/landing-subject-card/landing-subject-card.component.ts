@@ -7,7 +7,15 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./landing-subject-card.component.scss']
 })
 export class LandingSubjectCardComponent {
-  @Input() price: number = 0;
+  @Input() price!: number;
+  @Input() imageRelativePath!: string;
+  @Input() subjectName!: string;
+  @Input() subjectDescription!: string;
+  @Input() subjectStudyLevel!: string;
+  @Input() subjectRating!: number;
+  @Input() subjectViews!: number;
+  @Input() subjectNumberOfStudents!: number;
+
 
   assetsPath = environment.imgAssetsPath;
 }

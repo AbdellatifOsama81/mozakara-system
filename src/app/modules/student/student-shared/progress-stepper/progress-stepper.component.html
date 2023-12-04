@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-end position-relative gap-3 pt-1">
+    <div *ngFor="let step of steps" [class.not-done]="step.status === 'not-done'"
+        class="step d-flex flex-column align-items-end position-relative">
+        <div class="step-inner d-flex flex-column align-items-center gap-1">
+            <i *ngIf="step.status === 'not-done'" class="bi bi-record-circle"></i>
+            <i *ngIf="step.status === 'current'" class="bi bi-record-circle"></i>
+            <i *ngIf="step.status === 'done'" class="bi bi-check-circle-fill"></i>
+            <div class="step-name text-center mb-0">{{step.type}}</div>
+        </div>
+    </div>
+</div>

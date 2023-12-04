@@ -1,0 +1,15 @@
+@import '../../student.component.scss';
+
+.scrollable-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.links-container {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.inner-container {
+    margin-left: auto;
+}

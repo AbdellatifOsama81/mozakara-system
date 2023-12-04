@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { StudySubject } from 'src/app/core/interfaces/learning-resources/study-subject';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -9,6 +10,7 @@ import { environment } from 'src/environments/environment';
 export class SubjectVerticalCardComponent {
   @Input() showProgress: boolean = false;
   @Input() progress: number = 0;
+  @Input() subject!: StudySubject;
 
   assetsPath = environment.imgAssetsPath;
 }

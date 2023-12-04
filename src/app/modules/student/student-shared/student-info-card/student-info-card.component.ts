@@ -8,44 +8,44 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./student-info-card.component.scss']
 })
 export class StudentInfoCardComponent {
-  assetsPath = environment.imgAssetsPath + '/student';
-  studentPagesUrl = '/student/pages';
-  currentRoute!: string;
+  // assetsPath = environment.imgAssetsPath + '/student';
+  // studentPagesUrl = '/student/pages';
+  // currentRoute!: string;
 
-  pages = [
-    {
-      name: 'متابعاتي',
-      url: 'following'
-    },
-    {
-      name: 'اختبر نفسك',
-      url: 'tests'
-    },
-    {
-      name: 'مهام مكتملة',
-      url: 'completed-subjects'
-    },
+  // pages = [
+  //   {
+  //     name: 'متابعاتي',
+  //     url: 'following'
+  //   },
+  //   {
+  //     name: 'اختبر نفسك',
+  //     url: 'tests'
+  //   },
+  //   {
+  //     name: 'مهام مكتملة',
+  //     url: 'completed-subjects'
+  //   },
 
-    {
-      name: 'مهمات ليست مكتملة',
-      url: 'in-progress'
-    },
-    {
-      name: 'الرئيسية',
-      url: 'home'
-    },
-  ];
+  //   {
+  //     name: 'مهمات ليست مكتملة',
+  //     url: 'in-progress'
+  //   },
+  //   {
+  //     name: 'الرئيسية',
+  //     url: 'home'
+  //   },
+  // ];
 
 
-  constructor(private router: Router) {
-    //this is to handle state:active for the nav-links
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        this.currentRoute = event.url;
-      }
-    });
-  }
-  ngOnInit() {
-    this.currentRoute = this.router.url;
-  }
+  // constructor(private router: Router) {
+  //   //this is to handle state:active for the nav-links
+  //   this.router.events.subscribe((event) => {
+  //     if (event instanceof NavigationEnd) {
+  //       this.currentRoute = event.url;
+  //     }
+  //   });
+  // }
+  // ngOnInit() {
+  //   this.currentRoute = this.router.url;
+  // }
 }

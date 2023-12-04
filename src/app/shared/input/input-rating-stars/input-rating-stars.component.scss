@@ -1,0 +1,12 @@
+@import 'src/style/styles.scss';
+
+i {
+    color: $primary;
+    font-size: 24px;
+}
+
+@include mobile {
+    i {
+        font-size: 18px;
+    }
+}

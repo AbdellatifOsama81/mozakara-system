@@ -1,0 +1,17 @@
+@import '../../learning-resources.component.scss';
+
+.plan-title{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.units-container{
+    border: 1px solid $backgroundGray;
+    border-radius: 6px;
+}
+
+@include mobile{
+    .plan-title{
+        font-size: 14px;
+    }
+}

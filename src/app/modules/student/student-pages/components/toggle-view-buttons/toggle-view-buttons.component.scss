@@ -1,12 +1,23 @@
 @import '../../../student.component.scss';
 
-.btn-view-toggle{
+.view-btns-container {
+    white-space: nowrap;
+}
+
+.btn-view-toggle {
     color: $darkGray !important;
     background-color: $backgroundGray !important;
     border-color: $backgroundGray !important;
 }
-.btn-view-toggle.active{
+
+.btn-view-toggle.active {
     color: white !important;
     background-color: $primary !important;
     border-color: $primary !important;
+}
+
+@include mobile {
+    .btn {
+        scale: 75%;
+    }
 }

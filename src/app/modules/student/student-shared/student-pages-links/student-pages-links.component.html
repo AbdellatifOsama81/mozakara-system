@@ -1,0 +1,6 @@
+    <ul class="d-flex mb-0 column-gap-3 px-2 px-md-3">
+        <li *ngFor="let page of pages" class="page-item p-3" [routerLink]="studentPagesUrl+'/'+page.url"
+            [class.active]="currentRoute.endsWith('/' + page.url)">
+            <a class="page-link">{{page.name}}</a>
+        </li>
+    </ul>

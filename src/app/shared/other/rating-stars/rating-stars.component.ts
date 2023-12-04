@@ -15,12 +15,10 @@ export class RatingStarsComponent implements OnInit {
         this.starsWidths.push('100%');
         this.rating -= 1;
       }
-      else if (this.rating > 0) {
+      else {
         this.starsWidths.push(this.rating * 100 + '%');
         this.rating = 0;
       }
-      else
-        this.starsWidths.push('0%');
     }
   }
 }

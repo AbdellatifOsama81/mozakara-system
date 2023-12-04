@@ -7,4 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SubjectInfoComponent {
   @Input() price!: number;
+  @Input() studyLevel!: string;
+  @Input() subjectName!: string;
+  @Input() subjectDescription!: string;
 }

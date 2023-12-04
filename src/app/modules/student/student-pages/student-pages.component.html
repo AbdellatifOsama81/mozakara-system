@@ -1,8 +1,11 @@
-<div class="my-container position-relative pt-5">
+<div class="stuednt-pages-container position-relative">
     <div class="card-section px-5">
         <app-student-info-card></app-student-info-card>
     </div>
-    <div class="content-section w-100 px-lg-5 px-md-3 py-5">
+    <div class="content-section w-100 px-lg-5 px-3 py-5">
+        <div class="links-container">
+            <app-student-pages-links-scroll></app-student-pages-links-scroll>
+        </div>
         <router-outlet></router-outlet>
     </div>
 </div>

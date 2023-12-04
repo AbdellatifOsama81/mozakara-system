@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { StudySubject } from 'src/app/core/interfaces/learning-resources/study-subject';
+import { SubjectService } from 'src/app/shared/services/learning-resources/subject.service';
 
 @Component({
   selector: 'app-completed-subjects',
@@ -6,5 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./completed-subjects.component.scss']
 })
 export class CompletedSubjectsComponent {
-  subjects=[1,2,3,4,5,6]//dummy
+  subjects!: StudySubject[];
+
+  constructor(private _subjectService: SubjectService) { }
+
+  ngOnInit() {
+    this.getSubjects();
+  }
+  getSubjects() {
+    this._subjectService.getSubject().subscribe(
+      {
+        next: (response: any) => {
+          this.subjects = response.data;
+          console.log(this.subjects);
+        }
+      }
+    );
+  }
 }

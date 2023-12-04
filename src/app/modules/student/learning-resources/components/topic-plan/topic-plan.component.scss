@@ -1,0 +1,25 @@
+@import '../../learning-resources.component.scss';
+
+.name {
+    font-weight: 700;
+    color: $dark;
+
+    &,
+    p {
+        font-size: 14px;
+    }
+}
+
+i {
+    color: $dark;
+}
+
+@include mobile {
+
+    .name{
+        font-size: 12px;
+    }
+    .plan-data{
+        font-size: 10px;
+    }
+}

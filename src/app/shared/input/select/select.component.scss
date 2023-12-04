@@ -3,3 +3,26 @@
 * {
     text-align: end;
 }
+
+.select-contianer {
+    i {
+        left: 5%;
+        top: 35%;
+        cursor: pointer;
+        pointer-events: none;
+    }
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+option {
+    color: $primary;
+}
+
+@include mobile {
+    * {
+        font-size: 13px;
+    }
+}

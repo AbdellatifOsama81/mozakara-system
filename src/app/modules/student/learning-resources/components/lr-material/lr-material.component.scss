@@ -1,0 +1,31 @@
+@import '../../learning-resources.component.scss';
+
+.btn {
+    border-radius: 40px;
+    font-weight: 600;
+
+    &.btn-secondary {
+        color: $primary;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    &.btn-primary {
+        color: white;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+}
+
+@include mobile{
+    .buttons-container{
+        p{
+            font-size: 14px;
+        }
+    }
+}

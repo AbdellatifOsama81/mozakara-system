@@ -1,20 +1,37 @@
 @import '../student.component.scss';
 
-.content-section {
-    background-color: $backgroundGray;
-    position: absolute;
-    top: 40vh;
+.stuednt-pages-container {
+    height: 100vh;
 }
 
-.my-container {
+.card-section {
     background-color: $secondary;
-    height: 50vh;
+    height: 35%;
+}
+
+.content-section {
+    background-color: $backgroundGray;
 }
 
 app-student-info-card {
     position: absolute;
-    top: 5em;
+    top: 5%;
     left: 0;
     right: 0;
     z-index: 1;
+}
+
+router-outlet {
+    position: absolute;
+    top: 20%;
+}
+
+.links-container{
+    display: none;
+}
+
+@include mobile{
+    .links-container{
+        display: inline;
+    }
 }

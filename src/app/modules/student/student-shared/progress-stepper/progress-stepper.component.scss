@@ -1,0 +1,56 @@
+@import '../../student.component.scss';
+
+i {
+    font-size: 32px;
+    background-color: $backgroundWhite;
+    display: flex;
+}
+
+.step-name{
+    color: $darkGray;
+    font-size: 14px;
+}
+
+.step {
+    width: 10%;
+    color: $primary;
+    z-index: 1;
+
+    .step-inner {
+        max-width: 75%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 17%;
+        left: 80%;
+        width: 110%;
+        height: 3px;
+        background-color: $primary;
+        z-index: -1;
+
+    }
+
+    &:last-child::after {
+        width: 0%;
+    }
+
+    &.not-done {
+        color: $lightGray;
+
+        &::after {
+            background-color: $lightGray;
+        }
+    }
+}
+
+@include tablet {
+    i {
+        font-size: 24px;
+    }
+
+    .step-name{
+        font-size: 12px;
+    }
+}

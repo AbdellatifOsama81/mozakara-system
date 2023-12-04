@@ -1,0 +1,24 @@
+<div class="py-3">
+    <p class="d-flex justify-content-end side-title">
+        تقييم المحتوي
+    </p>
+    <div class="rating-container d-flex gap-2">
+        <div class="col-12 col-lg-9 d-flex flex-column justify-content-between gap-2">
+            <app-rating-percentage *ngFor="let percentage of ratingsPercentages; index as i" [percentage]="percentage"
+                [rating]="ratingsPercentages.length-i"></app-rating-percentage>
+        </div>
+        <div class="col">
+            <div class="average-container d-flex justify-content-center align-items-center">
+                <p class="average-number m-0">
+                    {{averageRating | number:'1.2-2'}}
+                </p>
+                <div class="average-stars d-flex flex-column align-items-center mt-2">
+                    <app-rating-stars [rating]="averageRating"></app-rating-stars>
+                    <p>
+                        تقييم المادة
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

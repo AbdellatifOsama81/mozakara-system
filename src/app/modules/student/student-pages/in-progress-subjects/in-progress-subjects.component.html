@@ -1,22 +1,14 @@
 <app-subject-search></app-subject-search>
-<div class="col mb-4 p-4 justify-content-center">
+<div class="d-flex flex-column gap-2 gap-sm-3 mb-4">
     <div class="d-flex justify-content-between">
-        <div>
+        <div class="d-flex gap-1 gap-sm-2">
             <app-arrow-buttons></app-arrow-buttons>
             <app-toggle-view-buttons (currView)="setCurrView($event)"></app-toggle-view-buttons>
         </div>
-        <h3 class="primary-subtitle">
+        <h3 class="primary-subtitle text-end">
             مهمات ليست مكتملة
         </h3>
     </div>
-    <!-- <div class="d-flex justify-content-center mt-3">
-        <div *ngIf="currView==='grid'" class="row row-cols-1 row-cols-md-4 g-4">
-            <app-subject-vertical-card *ngFor="let subject of subjects"
-                [showProgress]="true"></app-subject-vertical-card>
-        </div>
-        <div *ngIf="currView==='horizontal'" class="row  g-4">
-            <app-subject-horizontal-card *ngFor="let subject of subjects"></app-subject-horizontal-card>
-        </div>
-    </div> -->
+    <!-- <app-subject-card-grid *ngIf="subjects" [subjects]="subjects" [view]="currView" ></app-subject-card-grid> -->
     <app-subject-card-grid [view]="currView" ></app-subject-card-grid>
 </div>

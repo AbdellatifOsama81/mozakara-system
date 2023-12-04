@@ -1,13 +1,14 @@
-<div [formGroup]="parentFormGroup" class="d-flex flex-column search-contianer select-contianer p-1">
+<div class="d-flex flex-column p-1">
     <label> {{label}} </label>
-    <i class="bi bi-chevron-down pe-3"></i>
-    <select class="p-2" [formControlName]="myFormControlName">
-        <option disabled selected hidden [ngValue]="null">
-            <!-- <i class="bi bi-chevron-down pe-3"></i> -->
-            {{defaultOption}}
-        </option>
-        <option class="custom-option" *ngFor="let option of options" [ngValue]="option">
-            {{ option }}
-        </option>
-    </select>
+    <div [formGroup]="parentFormGroup" class="search-contianer select-contianer">
+        <i class="bi bi-chevron-down pe-3"></i>
+        <select class="w-100 p-2" [formControlName]="myFormControlName">
+            <option disabled selected hidden [ngValue]="null">
+                {{defaultOption}}
+            </option>
+            <option dir="rtl" class="text-end p-2" *ngFor="let option of options" [ngValue]="option">
+                {{ option }}
+            </option>
+        </select>
+    </div>
 </div>
