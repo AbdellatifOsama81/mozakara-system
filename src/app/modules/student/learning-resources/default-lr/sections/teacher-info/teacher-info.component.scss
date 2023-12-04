@@ -1,0 +1,23 @@
+@import '../../default-lr.component.scss';
+
+.label {
+    font-size: 14px;
+    color: $darkGray;
+}
+
+.name {
+    font-weight: 500;
+}
+
+app-rating-stars {
+    font-size: 22px;
+}
+
+@include mobile {
+    .teacher-rating-container {
+        flex-direction: column;
+    }
+    .name {
+        font-size: 13px;
+    }
+}

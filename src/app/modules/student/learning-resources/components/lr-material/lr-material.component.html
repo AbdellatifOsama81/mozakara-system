@@ -1,0 +1,20 @@
+<div class="py-4">
+    <app-lr-document *ngIf="materialType==='document'" [lrLink]="lrLink"></app-lr-document>
+    <app-lr-links *ngIf="materialType==='links'" [lrLink]="lrLink"></app-lr-links>
+    <app-lr-video *ngIf="materialType==='video'" [lrLink]="lrLink"></app-lr-video>
+    <app-lr-image *ngIf="materialType==='image'" [lrLink]="lrLink"></app-lr-image>
+</div>
+<div class="buttons-container d-flex justify-content-between gap-2">
+    <a href="#" class="btn btn-primary px-2 px-md-4" type="button">
+        <p class="p-1 m-1">
+            <i class="bi bi-arrow-left px-1 pt-1"></i>
+            رؤية المزيد
+        </p>
+    </a>
+    <a href="#" class="btn btn-secondary px-2 px-md-4" type="button">
+        <p class="p-1 m-1">
+            الرجوع الي الدرس السابق
+            <i class="bi bi-arrow-right px-1 pt-1"></i>
+        </p>
+    </a>
+</div>

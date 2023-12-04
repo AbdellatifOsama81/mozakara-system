@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-between p-2">
+    <p dir="rtl" class="duration m-0">
+        {{lrDuration | date:'m:ss'}}
+    </p>
+    <div class="name d-flex justify-content-around">
+        <p class="m-0">
+            {{learningResource.name}}
+        </p>
+        <i *ngIf="learningResource.resourceType==='document'" class="bi bi-file-earmark px-1"></i>
+        <i *ngIf="learningResource.resourceType==='links'" class="bi bi-link-45deg px-1"></i>
+        <i *ngIf="learningResource.resourceType==='video'" class="bi bi-play-fill px-1"></i>
+        <i *ngIf="learningResource.resourceType==='image'" class="bi bi-image px-1"></i>
+    </div>
+</div>

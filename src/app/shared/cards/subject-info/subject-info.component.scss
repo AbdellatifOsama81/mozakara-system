@@ -1,0 +1,36 @@
+@import 'src/style/styles.scss';
+
+.pill {
+    background-color: $pillBlue;
+    border-radius: 20px;
+    width: max-content;
+    color: $primary;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.subject-card-title {
+    color: $darkBlue;
+    font-weight: bold;
+}
+
+.subject-card-text {
+    color: $superLightGray;
+}
+
+.price-label {
+    color: $primary;
+    font-weight: 900;
+}
+
+@include mobile {
+    .pill {
+        font-size: 7px;
+    }
+
+    .subject-card-title,
+    .subject-card-text,
+    .price-label {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,17 @@
+<div class="links-container" #tabsDiv>
+    <ul class="d-flex justify-content-center mb-0 column-gap-3 px-3">
+        <li *ngFor="let tab of tabs" class="page-item d-flex justify-content-center text-center w-100 p-2 p-sm-3"
+            [class.active]="currentTab === tab.type" (click)="scrollTo(tab.type)">
+            <a class="page-link">{{tab.name}}</a>
+        </li>
+    </ul>
+</div>
+<div>
+    <div id="descriptionSection" #descriptionSection>
+        <app-lr-description [descriptionText]="descriptionText"></app-lr-description>
+    </div>
+    <div id="ratingSection" #ratingSection>
+        <app-lr-all-ratings [ratingsPercentages]="ratingsPercentages"></app-lr-all-ratings>
+        <app-lr-feedback></app-lr-feedback>
+    </div>
+</div>

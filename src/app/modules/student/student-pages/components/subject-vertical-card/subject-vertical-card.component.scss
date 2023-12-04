@@ -1,0 +1,24 @@
+@import '../../../student.component.scss';
+
+.btn {
+    background-color: $brightBlue;
+    border-color: $brightBlue;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.progress-success-label {
+    color: $successGreen;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@include mobile{
+    .btn{
+        font-size: 12px;
+    }
+    .progress-success-label {
+        font-size: 10px;
+    }
+}

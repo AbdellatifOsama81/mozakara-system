@@ -1,0 +1,45 @@
+@import '../../default-lr.component.scss';
+
+.comment-container {
+    border-top: 1px solid $superLightGray;
+}
+
+p {
+    font-size: 14px;
+
+    &.comment-text {
+        color: $darkGray;
+        white-space: pre-line;
+    }
+
+    &.date {
+        font-size: 12px;
+        color: $mediumGray;
+        display: list-item;
+    }
+
+    &.name {
+        font-weight: 500;
+    }
+}
+
+
+app-rating-stars {
+    font-size: 14px;
+}
+
+@include mobile {
+
+    .comment-container {
+        border-top: none;
+    }
+
+    p,
+    app-rating-stars {
+        font-size: 10px;
+
+        &.date {
+            font-size: 9px;
+        }
+    }
+}

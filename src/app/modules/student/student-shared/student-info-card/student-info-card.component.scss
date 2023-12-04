@@ -1,0 +1,73 @@
+@import '../../student.component.scss';
+
+.student-card {
+    background-color: white;
+    border: 0.9px solid $primary;
+    border-radius: 16px;
+}
+
+.student-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.study-level {
+    color: $darkBlue;
+}
+
+.btn {
+    border-radius: 40px;
+
+    p {
+        font-size: small;
+        font-weight: 600;
+    }
+}
+
+// ul {
+//     list-style-type: none;
+// }
+
+.links-container {
+    border-top: 0.1px solid $superLightGray;
+}
+
+// .page-link {
+//     color: $darkGray;
+// }
+
+// .page-item:hover,
+// .page-item.active {
+//     border-bottom: 2px solid $primary;
+//     cursor: pointer;
+
+//     a.page-link {
+//         color: $primary;
+//     }
+// }
+
+@include mobile {
+    .student-card-top {
+        flex-direction: column-reverse;
+    }
+
+    .btn-container {
+        width: 100%;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .student-name {
+        font-size: 16px;
+    }
+
+    .study-level {
+        font-size: 14px;
+    }
+
+    .links-container {
+        display: none;
+    }
+}

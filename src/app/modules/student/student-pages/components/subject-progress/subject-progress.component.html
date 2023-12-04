@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-between align-items-center">
+    <div>
+        <p class="progress-label align-items-center mb-0" [class.success]="progress==100" dir="rtl">
+            {{progress}}%
+            منتهي
+        </p>
+    </div>
+    <div class="col-8" dir="rtl">
+        <progress class="w-100" [class.success]="progress==100" [value]="progress" max="100"></progress>
+    </div>
+</div>

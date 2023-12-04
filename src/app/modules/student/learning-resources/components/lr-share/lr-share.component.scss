@@ -1,0 +1,41 @@
+@import '../../learning-resources.component.scss';
+
+$my-icon-bg: #9797971F;
+
+.title {
+    font-weight: 700;
+}
+
+.btn {
+    color: $primary;
+    font-weight: 600;
+    background-color: $my-icon-bg;
+    font-size: 14px;
+
+    i {
+        font-size: 20px;
+    }
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+@include mobile {
+    .btn {
+        font-size: 12px;
+
+        i {
+            font-size: 16px;
+        }
+    }
+}
+
+@include maxBreakpoint(340px) {
+    .btn {
+        padding: 3%;
+    }
+    .title {
+        font-size: 14px;
+    }
+}

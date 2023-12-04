@@ -1,0 +1,7 @@
+<div dir="rtl" class="d-flex py-2">
+    <div *ngFor="let id of [1,2,3,4,5]" [id]="id" (mouseenter)="onMouseEnter(id)" (mouseleave)="onMouseLeave()"
+        (click)="onClick(id)" class="d-flex align-items-center p-1">
+        <i *ngIf="!isFilled(id)" class="bi bi-star empty m-0"></i>
+        <i *ngIf="isFilled(id)" class="bi bi-star-fill full"></i>
+    </div>
+</div>

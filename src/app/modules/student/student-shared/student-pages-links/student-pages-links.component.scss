@@ -1,0 +1,31 @@
+@import '../../student.component.scss';
+
+.links-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.page-link {
+    color: $darkGray;
+    white-space: nowrap;
+}
+
+.page-item:hover,
+.page-item.active {
+    border-bottom: 2px solid $primary;
+    cursor: pointer;
+
+    a.page-link {
+        color: $primary;
+    }
+}
+
+@include mobile {
+    .page-link {
+        font-size: 13px;
+    }
+}

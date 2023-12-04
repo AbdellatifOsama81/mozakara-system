@@ -1,0 +1,15 @@
+@import '../../../student.component.scss';
+
+.arrow-btns-container{
+    white-space: nowrap;
+}
+
+i {
+    color: $primary;
+}
+
+@include mobile{
+    .btn{
+        scale: 75%;
+    }
+}

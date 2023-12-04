@@ -1,0 +1,51 @@
+@import '../../default-lr.component.scss';
+
+.average-container {
+    background-color: white;
+    border: 1px solid $superLightGray;
+    flex-direction: column;
+    aspect-ratio: 1/1;
+
+    .average-number {
+        font-size: 48px;
+        font-weight: 600;
+    }
+}
+
+.average-stars {
+    font-size: 20px;
+}
+
+
+@include maxBreakpoint(991px) {
+    .average-container {
+        aspect-ratio: auto;
+        flex-direction: row-reverse;
+        gap: 10%;
+
+        .average-number {
+            font-size: 28px;
+        }
+
+        .average-stars {
+            font-size: 18px;
+        }
+    }
+
+    .rating-container {
+        flex-direction: column-reverse;
+    }
+}
+
+@include mobile {
+    .average-container {
+        .average-number {
+            font-size: 20px;
+        }
+
+        .average-stars {
+            font-size: 12px;
+        }
+    }
+
+}

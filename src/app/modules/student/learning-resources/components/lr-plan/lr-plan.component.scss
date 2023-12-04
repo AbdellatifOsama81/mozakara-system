@@ -1,0 +1,29 @@
+@import '../../learning-resources.component.scss';
+
+.duration {
+    font-size: 14px;
+    color: $mediumGray;
+}
+
+.name {
+    font-size: 14px;
+
+    p {
+        color: $darkGray;
+    }
+
+    i {
+        color: $dark;
+    }
+}
+
+@include mobile {
+
+    .name {
+        font-size: 12px;
+    }
+
+    .duration {
+        font-size: 10px;
+    }
+}

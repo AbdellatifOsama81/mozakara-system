@@ -1,0 +1,36 @@
+@import '../../default-lr.component.scss';
+
+progress {
+    border-radius: 0;
+    height: 8px;
+
+    &::-webkit-progress-bar {
+        background-color: $secondary;
+        border-radius: 0;
+    }
+
+    &::-webkit-progress-value {
+        background-color: $primary;
+        border-radius: 0;
+    }
+}
+
+app-rating-stars {
+    font-size: small;
+}
+
+.label {
+    font-size: 14px;
+    color: $mediumGray;
+    white-space: nowrap;
+}
+
+@include maxBreakpoint(992px) {
+    .progress-bar-container {
+        flex-direction: column-reverse;
+    }
+
+    .label {
+        font-size: 12px;
+    }
+}

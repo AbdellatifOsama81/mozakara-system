@@ -1,0 +1,8 @@
+<div class="plan-container text-end p-2 py-4">
+    <p class="plan-title px-3">
+        المنهج الدراسي
+    </p>
+    <div class="units-container">
+        <app-unit-plan *ngFor="let unit of units" [unit]="unit"></app-unit-plan>
+    </div>
+</div>

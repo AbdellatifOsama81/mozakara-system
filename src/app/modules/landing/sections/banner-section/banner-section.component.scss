@@ -1,0 +1,97 @@
+@import '../../landing.component.scss';
+
+.banner-container {
+    color: white;
+    height: 60vh;
+    justify-content: center;
+}
+
+* {
+    z-index: 1;
+}
+
+.banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+}
+
+.banner-title {
+    font-size: xxx-large;
+    font-weight: 900;
+}
+
+.btn {
+    p {
+        font-size: small;
+        font-weight: 600;
+    }
+}
+
+@include minBreakpoint(1100px) {
+    .banner-container {
+        height: 80vh;
+    }
+
+    p, .btn p {
+        font-size: x-large;
+    }
+}
+
+@include tablet {
+    .banner-title {
+        font-size: xx-large;
+    }
+
+    .btn {
+        p {
+            font-size: smaller;
+        }
+    }
+
+    .banner-bg {
+        img {
+            width: 130%;
+        }
+    }
+}
+
+@include mobile {
+    .banner-container {
+        height: 80vh;
+    }
+
+    .banner-bg {
+        img {
+            width: 300%;
+        }
+    }
+}
+
+@include maxBreakpoint(420px) {
+    .banner-bg {
+        img {
+            width: 350%;
+        }
+    }
+
+    .btn {
+        font-size: medium;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+}
+
+@include maxBreakpoint(340px) {
+    .banner-container {
+        justify-content: start;
+    }
+}

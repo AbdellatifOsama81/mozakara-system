@@ -1,0 +1,30 @@
+@import '../../landing.component.scss';
+
+.services-card-container {
+    border-radius: 40px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+p {
+    color: $darkGray;
+}
+
+.dark-subtitle {
+    color: $dark;
+    font-weight: 600;
+}
+
+.circular-img-container {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: #004bfd29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

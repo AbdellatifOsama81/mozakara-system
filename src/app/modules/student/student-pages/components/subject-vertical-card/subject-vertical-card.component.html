@@ -1,0 +1,32 @@
+<div class="card-main-container p-3">
+    <div class="d-flex justify-content-center">
+        <img class="img-fluid" [src]="assetsPath +'/subject-img.png'" alt="subject-img">
+    </div>
+    <app-subject-info 
+        [subjectName]="subject.name"
+        [subjectDescription]="subject.description"
+        [studyLevel]="subject.studyLevel"
+    ></app-subject-info>
+    <div *ngIf="showProgress; else hiddenProgress" id="noProgress">
+        <app-subject-progress [progress]="progress"></app-subject-progress>
+        <div class="d-flex justify-content-center">
+            <a href="#" type="button" class="btn btn-primary p-0 p-sm-2 w-100">
+                <p class="m-1">
+                    متابعة التقدم
+                </p>
+            </a>
+        </div>
+    </div>
+    <ng-template #hiddenProgress>
+        <div class="d-flex justify-content-between align-items-center px-2">
+            <p class="progress-success-label pt-2">
+                24% منتهي
+            </p>
+            <a href="#" type="button" class="btn btn-primary p-0 p-sm-2 w-100">
+                <p class="m-1">
+                    متابعة التقدم
+                </p>
+            </a>
+        </div>
+    </ng-template>
+</div>

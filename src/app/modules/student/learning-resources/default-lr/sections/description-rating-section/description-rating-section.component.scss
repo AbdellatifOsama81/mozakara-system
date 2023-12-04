@@ -1,0 +1,24 @@
+@import '../../default-lr.component.scss';
+
+ul {
+    list-style-type: none;
+}
+
+.page-link {
+    color: $darkGray;
+}
+
+.page-item:hover,
+.page-item.active {
+    border-bottom: 2px solid $primary;
+    cursor: pointer;
+    a.page-link {
+        color: $primary;
+    }
+}
+
+@include mobile{
+    .page-item{
+        font-size: 13px;
+    }
+}

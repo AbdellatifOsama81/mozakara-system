@@ -1,0 +1,80 @@
+@import '../../landing.component.scss';
+
+* {
+    z-index: 1;
+}
+
+.start-now-banner-container {
+    background-color: $secondary;
+    height: 90vh;
+}
+
+h2 {
+    font-size: xxx-large;
+    color: $dark;
+    font-weight: 500;
+}
+
+p.text {
+    color: $mediumGray;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.btn {
+    border-radius: 40px;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.img-container {
+    position: absolute;
+    z-index: -1;
+    left: 5%;
+    height: 100%;
+
+    img {
+        height: 90%;
+    }
+}
+
+@include minBreakpoint(1400px){
+    p{
+        font-size: larger;
+    }
+}
+
+@include tablet {
+
+    h2 {
+        font-size: xx-large;
+    }
+
+    .btn {
+        font-size: small;
+    }
+    .img-container {    
+        img {
+            height: 65%;
+        }
+    }
+}
+
+@include mobile{
+    h2 {
+        font-size: x-large;
+    }
+
+    .start-now-banner-container {
+        height: 100vh;
+    }
+
+    .img-container {    
+        img {
+            opacity: 0.2;
+            height: 55%;
+        }
+    }
+}

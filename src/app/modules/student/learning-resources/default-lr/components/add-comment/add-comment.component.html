@@ -1,0 +1,22 @@
+<div class="add-comment-container rounded shadow gap-3 px-4 p-3">
+    <div class="d-flex justify-content-end align-items-center gap-3">
+        <p class="name mb-0">{{studentName}}</p>
+        <app-avatar-img [imageRelativePath]="imageRelativePath" altText="student photo" width="40px"></app-avatar-img>
+    </div>
+    <form class="form" [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+        <div class="d-flex justify-content-end">
+            <app-input-rating-stars (rating)="onRatingChanged($event)"></app-input-rating-stars>
+        </div>
+        <div class="d-flex pb-3 border-bottom">
+            <textarea class="w-100" dir="auto" formControlName="commentText" wrap="hard"
+                placeholder="أضف تعليقاً"></textarea>
+        </div>
+        <div class="d-flex justify-content-start pt-3">
+            <button type="submit" [disabled]="!commentForm.valid" class="btn btn-primary px-4">
+                <p class="m-1">
+                    إضافة تعليق
+                </p>
+            </button>
+        </div>
+    </form>
+</div>

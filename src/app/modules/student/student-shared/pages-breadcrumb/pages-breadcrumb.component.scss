@@ -1,0 +1,39 @@
+@import '../../student.component.scss';
+
+ol {
+    list-style-type: none;
+
+    &.breadcrumb {
+        list-style-type: '>';
+
+        li {
+            color: $darkGray;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:first-child {
+                list-style: none;
+            }
+
+            &:hover {
+                color: $primary;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+@include tablet {
+    ol {
+
+        &.breadcrumb {
+
+            li {
+                font-size: 12px;
+            }
+        }
+    }
+}

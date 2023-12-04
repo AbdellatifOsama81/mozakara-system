@@ -3,3 +3,9 @@
 @import 'variables.scss';
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+@import 'breakpoints.scss';
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500&display=swap');
+
+*{
+    font-family: Tajawal;
+}

@@ -1,0 +1,65 @@
+@import '../student.component.scss';
+
+.lr-container {
+    background-color: $backgroundWhite;
+}
+
+.big-side-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.side-title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.small-text-container {
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+.plan-container {
+    border-bottom: 1px solid $backgroundGray;
+}
+
+.plan-data {
+    font-size: 14px;
+    color: $darkGray;
+
+    i {
+        color: $primary;
+
+        &.clock-icon {
+            color: $dark;
+        }
+    }
+}
+
+.wide-lr-plan {
+    display: none;
+}
+
+.side-lr-plan {
+    display: block;
+}
+
+@include maxBreakpoint(991px) {
+    .wide-lr-plan {
+        display: block;
+    }
+
+    .side-lr-plan {
+        display: none;
+    }
+}
+
+@include mobile {
+    .side-title {
+        font-size: 14px;
+    }
+
+    .small-text-container {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,28 @@
+<!-- <div *ngIf="view==='grid'" class="row row-cols-2 row-cols-lg-3 row-cols-xl-4 g-4">
+    <app-subject-vertical-card *ngFor="let subject of subjects" [showProgress]="true" [progress]="80"
+        [subject]="subject"></app-subject-vertical-card>
+</div>
+<div *ngIf="view==='horizontal'" class="row g-4">
+    <app-subject-horizontal-card *ngFor="let subject of subjects" [progress]="80"
+        [subject]="subject"></app-subject-horizontal-card>
+</div> -->
+
+<!-- <div *ngIf="view==='grid'" class="row row-cols-2 row-cols-lg-3 row-cols-xl-4 g-4">
+    <app-subject-vertical-card *ngFor="let subject of subjects$ | async" [showProgress]="true" [progress]="80"
+        [subject]="subject"></app-subject-vertical-card>
+</div>
+<div *ngIf="view==='horizontal'" class="row g-4">
+    <app-subject-horizontal-card *ngFor="let subject of subjects$ | async" [progress]="80"
+        [subject]="subject"></app-subject-horizontal-card>
+</div> -->
+
+<!-- <ng-container *ngIf="(subjects$ | async) as subjects"> -->
+    <div *ngIf="view==='grid'" class="row row-cols-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        <app-subject-vertical-card *ngFor="let subject of subjects" [showProgress]="true" [progress]="80"
+            [subject]="subject"></app-subject-vertical-card>
+    </div>
+    <div *ngIf="view==='horizontal'" class="row g-4">
+        <app-subject-horizontal-card *ngFor="let subject of subjects" [progress]="80"
+            [subject]="subject"></app-subject-horizontal-card>
+    </div>
+<!-- </ng-container> -->

@@ -1,0 +1,24 @@
+@import '../../../student.component.scss';
+
+.thumbnail-container {
+    i {
+        position: absolute;
+        color: white;
+        font-size: x-large;
+    }
+}
+
+.card-expanded-item {
+    border-radius: 0 0 10px 10px;
+    border-top: 0.3px solid $lightGray;
+}
+
+@include tablet {
+    .subject-card-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}

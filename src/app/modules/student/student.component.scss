@@ -1,0 +1,83 @@
+@import 'src/style/styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500&display=swap');
+
+* {
+    font-family: 'Tajawal' !important;
+}
+
+.primary-subtitle {
+    color: $dark;
+    font-size: 22.5px;
+    font-weight: 700;
+}
+
+.subject-card-title {
+    color: $darkBlue;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.subject-card-text {
+    color: $darkGray;
+}
+
+.card-main-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+label {
+    font-size: 12px;
+}
+
+input,
+select {
+    border-radius: 15px;
+    border: 1px solid #D1D1D1;
+    background-color: white;
+    color: $darkGray;
+    /*remove default arrow*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+        outline: none !important;
+        border: 2px solid $dark;
+    }
+}
+
+.search-contianer {
+    position: relative;
+
+    i {
+        position: absolute;
+        top: 50%;
+        align-self: flex-end;
+    }
+}
+
+@include mobile {
+    .subject-card-title {
+        font-size: 16px;
+    }
+
+    .subject-card-text {
+        font-size: 12px;
+    }
+
+    .primary-subtitle {
+        font-size: 18px;
+    }
+
+    input,
+    select {
+        font-size: 13px;
+    }
+}

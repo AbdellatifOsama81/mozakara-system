@@ -1,0 +1,23 @@
+@import '../../../student.component.scss';
+
+.btn {
+    background-color: $brightBlue;
+    border-color: $brightBlue;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.accordion-btn {
+    color: $brightBlue;
+}
+
+@include mobile {
+    .card-actions-container {
+
+        .btn,
+        .accordion-btn {
+            font-size: 10px;
+        }
+    }
+}

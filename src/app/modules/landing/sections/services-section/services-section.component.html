@@ -1,0 +1,15 @@
+<div class="d-flex flex-column p-lg-5 p-md-4 p-0">
+    <app-side-heading label="خدماتنا" title="ما الذي تقدمه مذاكرة"></app-side-heading>
+    <div class="d-flex justify-content-center">
+        <div class="col-12">
+            <div class="d-flex flex-wrap justify-content-center">
+                <ng-container *ngFor="let servicesCardsContent of servicesCardsContents">
+                    <div class="col-md-6 col-sm-12">
+                        <app-services-card [title]="servicesCardsContent.title" [text]="servicesCardsContent.text"
+                            [imgPath]="assetsPath + servicesCardsContent.imgName"></app-services-card>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
